@@ -1,0 +1,74 @@
+.ban-titre {
+  color: #b1c700;
+  font-size: 50px;
+  font-weight: bold;
+  padding-left: 80px;
+  padding-top: 80px;
+}
+.ban-soustitre {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50px;
+  padding-left: 80px;
+}
+.ban-texte {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: none;
+  margin-top: 30px;
+  padding-left: 80px;
+}
+
+.ban2-titre {
+  color: #b1c700;
+  font-size: 50px;
+  font-weight: bold;
+  padding-left: 130px;
+  padding-top: 80px;
+}
+.ban2-soustitre {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50px;
+  padding-left: 140px;
+}
+.ban2-texte {
+  color: #000000;
+  font-size: 15px;
+  font-weight: none;
+  margin-top: 30px;
+  padding-left: 140px;
+}
+
+@media only screen and (min-device-width: 1240px) and (max-device-width: 1366px) {
+  .pack {
+    min-width: 500px !important;
+    max-width: 500px !important;
+    width: 600px !important;
+    height: 500px !important;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .pack {
+    min-width: 260px !important;
+    max-width: 260px !important;
+    width: 260px !important;
+    height: 260px !important;
+  }
+}
+
+.header-content {
+  height: 80px;
+}
+.header-logo {
+  top: 20px;
+}
+.module-texte p {
+  font-weight: 400;
+  margin: 23px 0 33px;
+  line-height: 28px;
+  font-size: 16px;
+  color: #121212;
+}
