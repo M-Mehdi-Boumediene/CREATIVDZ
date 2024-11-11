@@ -93,3 +93,13 @@
   font-size: 16px;
   color: #121212;
 }
+
+@media only screen and (min-width: 480px) {
+  .ban-titre {
+    color: #000000;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 80px;
+    padding-top: 80px;
+  }
+}
