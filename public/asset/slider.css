@@ -19,6 +19,20 @@
   margin-top: 30px;
   padding-left: 80px;
 }
+.ban-soustitre-black {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50px;
+  padding-left: 80px;
+}
+.ban-texte-black {
+  color: #000000;
+  font-size: 15px;
+  font-weight: none;
+  margin-top: 30px;
+  padding-left: 80px;
+}
 
 .ban2-titre {
   color: #b1c700;
