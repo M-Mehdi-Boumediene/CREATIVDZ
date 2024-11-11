@@ -118,3 +118,6 @@
     width: 400px;
   }
 }
+.tp-mask-wrap {
+  width: 800px !important;
+}
