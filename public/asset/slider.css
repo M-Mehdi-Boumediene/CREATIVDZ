@@ -1,5 +1,5 @@
 .ban-titre {
-  color: #b1c700;
+  color: #000000;
   font-size: 50px;
   font-weight: bold;
   padding-left: 80px;
@@ -13,14 +13,14 @@
   padding-top: 80px;
 }
 .ban-soustitre {
-  color: #ffffff;
+  color: #000000;
   font-size: 20px;
   font-weight: bold;
   margin-top: 50px;
   padding-left: 80px;
 }
 .ban-texte {
-  color: #ffffff;
+  color: #000000;
   font-size: 15px;
   font-weight: none;
   margin-top: 30px;
