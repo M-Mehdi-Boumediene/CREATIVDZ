@@ -94,7 +94,7 @@
   color: #121212;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-device-width: 480px) {
   .ban-titre {
     color: #000000;
     font-size: 30px;
