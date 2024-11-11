@@ -102,4 +102,18 @@
     padding-left: 20px;
     padding-top: 70px;
   }
+  .ban-texte {
+    color: #000000;
+    font-size: 15px;
+    font-weight: none;
+    margin-top: 30px;
+    padding-left: 20px;
+  }
+  .ban-soustitre {
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+    padding-left: 20px;
+  }
 }
