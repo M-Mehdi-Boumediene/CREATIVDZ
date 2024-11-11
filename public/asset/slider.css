@@ -49,14 +49,14 @@
   padding-top: 80px;
 }
 .ban2-soustitre {
-  color: #000000;
+  color: #ffffff;
   font-size: 20px;
   font-weight: bold;
   margin-top: 50px;
   padding-left: 140px;
 }
 .ban2-texte {
-  color: #000000;
+  color: #ffffff;
   font-size: 15px;
   font-weight: none;
   margin-top: 30px;
@@ -96,21 +96,21 @@
 
 @media only screen and (max-device-width: 480px) {
   .ban-titre {
-    color: #000000;
+    color: #b1c700;
     font-size: 30px;
     font-weight: bold;
     padding-left: 20px;
     padding-top: 70px;
   }
   .ban-texte {
-    color: #000000;
+    color: #ffffff;
     font-size: 15px;
     font-weight: none;
     margin-top: 30px;
     padding-left: 20px;
   }
   .ban-soustitre {
-    color: #000000;
+    color: #ffffff;
     font-size: 17px;
     font-weight: bold;
     margin-top: 50px;
