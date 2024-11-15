@@ -2,9 +2,9 @@
 
 
 {% block body %}
-	<link rel="stylesheet" href="{{asset('asset/css/3.css')}}">
-	<link rel="stylesheet" href="{{asset('asset/css/2.css')}}">
-	<link rel="stylesheet" href="{{asset('asset/css/1.css')}}">
+	<link rel="stylesheet" href="{{asset('asset/css/3.css')}}" async>
+	<link rel="stylesheet" href="{{asset('asset/css/2.css')}}" async>
+	<link rel="stylesheet" href="{{asset('asset/css/1.css')}}" async>
 
 	<link rel="stylesheet" type="text/css" href="{{asset('asset/slider.css')}}">
 	<main>
@@ -257,7 +257,8 @@
 
 {% endblock %}
 {% block javascripts %}
-	<script src="{{asset('asset/js/main.1.js')}}"></script>
+	<script src="{{asset('asset/js/1.js')}}"></script>
+		<script src="{{asset('asset/js/2.js')}}"></script>
 	<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
 
 
