@@ -116,4 +116,13 @@ DirectoryIndex index.php
   ExpiresByType image/ico "access plus 1 month"
   ExpiresByType image/x-icon "access plus 1 month"
   ExpiresByType text/html "access plus 600 seconds"
+
+  
 </IfModule>  
+
+zend_extension=opcache.so
+opcache.enable=1
+opcache.memory_consumption=512
+opcache.max_accelerated_files=5000
+opcache.validate_timestamps=1
+opcache.revalidate_freq=60
