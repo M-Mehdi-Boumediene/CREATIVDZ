@@ -1,10 +1,13 @@
 {% extends 'base.html.twig' %}
 
-
-{% block body %}
+{% block stylesheets %}
 	<link rel="stylesheet" href="{{asset('asset/css/3.css')}}" async>
 	<link rel="stylesheet" href="{{asset('asset/css/2.css')}}" async>
 	<link rel="stylesheet" href="{{asset('asset/css/1.css')}}" async>
+
+{% endblock %}	
+{% block body %}
+
 
 	<link rel="stylesheet" type="text/css" href="{{asset('asset/slider.css')}}">
 	<main>
