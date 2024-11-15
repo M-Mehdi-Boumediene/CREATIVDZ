@@ -1,42 +1,7 @@
 !(function (n) {
-  var r = {};
-  function i(e) {
-    var t;
-    return (
-      r[e] ||
-      ((t = r[e] = { i: e, l: !1, exports: {} }),
-      n[e].call(t.exports, t, t.exports, i),
-      (t.l = !0),
-      t)
-    ).exports;
-  }
-  (i.m = n),
-    (i.c = r),
-    (i.d = function (e, t, n) {
-      i.o(e, t) ||
-        Object.defineProperty(e, t, {
-          configurable: !1,
-          enumerable: !0,
-          get: n,
-        });
-    }),
-    (i.n = function (e) {
-      var t =
-        e && e.__esModule
-          ? function () {
-              return e.default;
-            }
-          : function () {
-              return e;
-            };
-      return i.d(t, "a", t), t;
-    }),
-    (i.o = function (e, t) {
-      return Object.prototype.hasOwnProperty.call(e, t);
-    }),
-    (i.p = "/"),
-    i((i.s = 0));
-})({
+
+
+({
     F1si: function (e, t, n) {
         (function (e) {
           var n,
@@ -2540,4 +2505,7 @@
             duration: 2e3,
           });
       },
+
+
+    })
 });
