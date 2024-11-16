@@ -1,0 +1,1357 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+
+
+	<link rel="stylesheet" href="{{asset('asset/css/def1.css')}}">
+
+
+{% endblock %}
+{% block body %}
+
+<div class="header-overflow" id="header-overflow"></div>
+	<main>
+		<div class="content">
+			<div class="website_title">Quel prix pour un site internet professionnel ?
+			</div>
+			<div class="website_etape-content">
+				<div class="website_etape" id="website_etape">Etape 1</div>
+				<div class="website_end" id="website_end" style="position: absolute;top: -200px;right: 0;color: #e3e6e9;font-weight: 600;font-size: 125px;line-height: 125px;z-index: 0;">Récapitulatif</div>
+
+			</div>
+			<div class="website" id="website">
+
+				<div class="website_header" id="website_header">
+					<div class="website_header-items">
+						<div class="website_header-item website_header-item-active animated rubberBand" id="website_header-item-1">1</div>
+						<div class="website_header-item" id="website_header-item-2">2</div>
+						<div class="website_header-item" id="website_header-item-3">3</div>
+						<div class="website_header-item" id="website_header-item-4">4</div>
+						<div class="website_header-item" id="website_header-item-5">5</div>
+						<div class="website_header-item" id="website_header-item-6">6</div>
+						<div class="website_header-item" id="website_header-item-7">7</div>
+						<div class="website_header-item" id="website_header-item-8">8</div>
+						<div class="website_header-item" id="website_header-item-9">9</div>
+						<div class="website_header-item" id="website_header-item-10">10</div>
+						<div class="website_header-item" id="website_header-item-11">11</div>
+						<div class="website_header-item" id="website_header-item-12">12</div>
+						<div class="website_header-item" id="website_header-item-13">13</div>
+						<div class="website_header-item" id="website_header-item-14">14</div>
+						<div class="website_header-item" id="website_header-item-15">15</div>
+						<div class="website_header-item" id="website_header-item-16">16</div>
+						<div class="website_header-item" id="website_header-item-17">17</div>
+					</div>
+				</div>
+				<div class="website_questions" id="website_questions">
+					<div class="website_question" id="website_question-1" data-id="1">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Souhaitez-vous partir d'une base Template ? (plus économique)
+								</div>
+								<div class="website_question-desc">Le Template est une base structurelle graphique pré-définie.
+									<br>
+									<br>
+									Appliqué à la création de site Internet, un Template ou thème ou encore modèle graphique est un moyen de séparer le contenu rédactionnel (contenu textuel) de la forme (la manière dont il est présenté). Un Template fait
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            donc office de gabarit (modèle) où seuls certains éléments sont modifiables (le contenu texte, les images, les couleurs et le fond).<br>
+									<br>
+								</div>
+							</div>
+							<img src="{{asset('asset/tmp/website/5ed4bd582de3c.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select template">
+								<option value="1">NON je préfère un codage personnalisé
+								</option>
+								<option value="2">oui</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-2" data-id="2">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Nombre de page
+								</div>
+								<div class="website_question-desc">Indiquez ici le nombre de page souhaité pour votre site internet.
+									<br>
+									Les pages : "contact" et "mentions légales" ne doivent pas être comptabilisées.<br>
+									(ex : Accueil + Nos produits + Nos réalisations + Nos références + Contact
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            = 4 pages)</div>
+							</div>
+							<img src="{{asset('asset/img/58ab0acec1a10.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select nbpages">
+								<option value="1">1 page accueil seule
+								</option>
+								<option value="2">2 pages
+								</option>
+								<option value="3">3 pages</option>
+								<option value="4">4 pages</option>
+								<option value="5">5 pages
+								</option>
+								<option value="6">6 pages
+								</option>
+								<option value="7">7 pages
+								</option>
+								<option value="8">8 pages
+								</option>
+								<option value="9">9 pages
+								</option>
+								<option value="10">10 pages
+								</option>
+								<option value="11">11 pages
+								</option>
+								<option value="12">12 pages
+								</option>
+								<option value="13">13 pages
+								</option>
+								<option value="14">14 pages
+								</option>
+								<option value="15">15 pages
+								</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-3" data-id="3">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Nombre de slide
+								</div>
+								<div class="website_question-desc">Combien de message d'accroche souhaiteriez-vous voir apparaitre à l'accueil de votre site ?
+									<br>
+									Le Slide désigne ici une diapositive, et par extension les images projetées à l'accueil de votre site web. Généralement nous concevons
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            3 à 6 slides pour
+									<br>
+									animer l'accueil et faire passer les messages les plus importants.
+								</div>
+							</div>
+							<img src="{{asset('asset/img/58ab0b50431f9.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select nbslides">
+								<option value="0">Pas de slide d'accueil</option>
+								<option value="1">1 slide</option>
+								<option value="2">2 slides</option>
+								<option value="3">3 slides
+								</option>
+								<option value="4">4 slides
+								</option>
+								<option value="5">5 slides
+								</option>
+								<option value="6">6 slides
+								</option>
+								<option value="7">7 slides
+								</option>
+								<option value="8">8 slides
+								</option>
+								<option value="9">9 slides
+								</option>
+								<option value="10">10 slides
+								</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-4" data-id="4">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Souhaitez-vous une ou plusieurs pages administrables ?
+								</div>
+								<div class="website_question-desc">Appliqué aux sites web dynamiques, le terme back office désigne l'interface permettant de gérer le contenu d'un site dynamique (bien souvent un CMS).<br>
+									Vous aurez donc la possibilité de modifier certains contenus sur le nombre
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            de page défini.
+									<br>
+									Exemple : galerie d'images / nos réalisations</div>
+							</div>
+							<img src="{{asset('asset/img/58af4760584d8.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select nbpageadmin">
+								<option value="0">Pas de page administrable</option>
+								<option value="1">1 page administrable
+								</option>
+								<option value="2">2 pages administrables
+								</option>
+								<option value="3">3  pages administrables
+								</option>
+								<option value="4">4  pages administrables
+								</option>
+								<option value="5">5  pages administrables
+								</option>
+								<option value="6">6 pages administrables
+								</option>
+								<option value="7">7  pages administrables
+								</option>
+								<option value="8">8 pages administrables
+								</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-5" data-id="5">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Souhaitez-vous une page actualité ?
+								</div>
+								<div class="website_question-desc">Il existe quatre types de contenus qui feront ainsi vivre votre site :<br>
+									- Premièrement les contenus aspirationnels: des articles sur l'expérience utilisateur autour de votre marque, des guides, des tutoriaux, des listes de références,
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            etc.
+									<br>
+									- Deuxièmement, des contenus relationnels: des témoignages, des études de cas, des avis d'experts, de l'humain donc !
+									<br>
+									- Ajoutez y une part de contenus transactionnels: lexique, f.a.q. (foire aux questions).
+									<br>
+									- Et enfin des contenus d'acquisition: concours, conférences filmées, chats en ligne, etc.
+									<br>
+									<br>
+									C'est l'équilibre et la variété de ces contenus qui vous offrira la possibilité de mettre régulièrement votre site à jour avec de nouvelles publications.
+									<br>
+									(Accès au contenu via une interface sécurisée.)<br>
+								</div>
+							</div>
+							<img src="{{asset('asset/img/58af48435f0e8.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select pageactu">
+								<option value="0">Pas de page actualité</option>
+								<option value="1">1 page actualité
+								</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-6" data-id="6">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Optimisation tablette et mobile
+								</div>
+								<div class="website_question-desc">Un site web adaptatif (anglais RWD pour responsive web design, conception de sites web adaptatifs selon l'OQLF) est un site web dont la conception vise, grâce à différents principes et techniques, à offrir une consultation confortable
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            même pour des supports différents.</div>
+							</div>
+							<img src="{{asset('asset/img/58af49c13a33e.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select responsive">
+								<option value="0">SANS - Optimisation au format / simple
+								</option>
+								<option value="1">Optimisation 1 pages</option>
+								<option value="2">Optimisation 2 pages</option>
+								<option value="3">Optimisation 3 pages</option>
+								<option value="4">Optimisation 4 pages</option>
+								<option value="5">Optimisation 5 pages</option>
+								<option value="6">Optimisation 6 pages</option>
+								<option value="7">Optimisation 7 pages</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-7" data-id="7">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Optimisation au référencement naturel
+								</div>
+								<div class="website_question-desc">Ce pack permet d'avoir l'essentiel pour un bon référencement naturel pour un site web vitrine ou e-commerce. Il vous permet d'optimiser votre positionnement dans les moteurs de recherche.
+									<br>
+									<br>
+									- Réécriture d'URL (URL rewriting)
+									<br>
+									- Optimisation des Meta (description, titre, mots clefs)<br>
+									- Optimisation de la structure du site (balises H1, H2, Strong …)<br>
+									- Mise en place du fichier sitemap XML et robots.txt<br>
+									- Création d'une page HTML : plan du site<br>
+									- Inscription de votre entreprise dans Google Adresses / Google Maps<br>
+									<br>
+								</div>
+							</div>
+							<img src="{{asset('asset/img/58af4a818bebf.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select seo">
+								<option value="0">Sans référencement</option>
+								<option value="1">Référencement simple 1 page</option>
+								<option value="2">Référencement simple 2 pages</option>
+								<option value="3">Référencement simple 3 pages</option>
+								<option value="4">Référencement simple 4 pages</option>
+								<option value="5">Référencement simple 5 pages</option>
+								<option value="6">Référencement simple 6 pages</option>
+								<option value="7">Référencement simple 7 pages</option>
+								<option value="8">Référencement simple 8 pages</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-8" data-id="8">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Faut-il prévoir de la rédaction de contenu ?
+								</div>
+								<div class="website_question-desc">La création de contenu pour votre site web est une composante très importante pour le référencement de votre entreprise auprès de vos futurs prospects. En effet, grâce a un contenu textuel bien fourni, vous allez pouvoir référencer
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            vos pages et devenir visible sur les moteurs de recherche !<br>
+									<br>
+									Pourquoi investir dans la création de contenu ?<br>
+									Le contenu de votre site Internet va avoir plusieurs utilités. Il va permettre dans un premier temps de vendre votre savoir-faire et vos produits aux visiteurs de votre
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            site. Il va également permettre de gagner en visibilité sur les moteurs de recherche. Vous serrez présent là où des prospects recherchent l'information.</div>
+							</div>
+							<img src="{{asset('asset/img/58af4b506290b.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select redaction">
+								<option value="0">NON tout sera fourni et préparé correctement
+								</option>
+								<option value="1">Textes à retravailler sur 1 page
+								</option>
+								<option value="2">Textes à retravailler sur 2 pages</option>
+								<option value="3">Textes à retravailler sur 3 pages</option>
+								<option value="4">Textes à retravailler sur 4 pages</option>
+								<option value="5">Textes à retravailler sur 5 pages</option>
+								<option value="6">Textes à retravailler sur 6 pages</option>
+								<option value="7">Textes à retravailler sur 7 pages</option>
+								<option value="8">Textes à retravailler sur 8 pages</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-9" data-id="9">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Possédez-vous un logo ?
+								</div>
+								<div class="website_question-desc">Un logo est essentiel pour incarner une entreprise ou un commerce. Plus son identité sera forte, plus sa reconnaissance par vos clients actuels et futurs sera facilitée.<br>
+									<br>
+									Notre studio de création graphique est là pour vous accompagner et pour vous conseiller au mieux tout au long du processus de conception de vos futurs projets. N'hésitez pas à nous consulter !
+								</div>
+							</div>
+							<img src="{{asset('asset/img/58af50d661b97.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select logo">
+								<option value="0">Oui</option>
+								<option value="1">NON le logo est à créer en même temps</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-10" data-id="10">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Souhaitez-vous pouvoir envoyer des E-mailing ou une Newsletter ?
+								</div>
+								<div class="website_question-desc">Le terme de newsletter désigne généralement un e-mail à vocation commerciale et publicitaire envoyé périodiquement à des prospects ou clients abonnés. Le contenu de la newsletter peut être simplement constitué d'une sélection de
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            produits ou avoir un contenu éditorial (lettre d'informations au sens strict). Renseignez-vous à l'agence pour plus de détails.
+								</div>
+							</div>
+							<img src="{{asset('asset/img/58af51cec825f.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select newsletter">
+								<option value="0">SANS système de Newsletter</option>
+								<option value="1">AVEC système de Newsletter</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-11" data-id="11">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Souhaitez-vous un système de commande en ligne ?
+								</div>
+								<div class="website_question-desc">Système de commande en ligne simplifié pour la commande des produits.
+									<br>
+									Si le site est principalement destiné à la vente de produit, vous devez choisir site "e-commerce" au démarrage.
+								</div>
+							</div>
+							<img src="{{asset('asset/img/58af533fca761.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select commande">
+								<option value="0">NON pas de système de commande en ligne</option>
+								<option value="1">AVEC système de commande en ligne sur une page
+								</option>
+								<option value="2">AVEC système de commande en ligne sur 2 pages
+								</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-12" data-id="12">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Souhaitez-vous un formulaire de contact simple ou complexe ?
+								</div>
+								<div class="website_question-desc">Sur un formulaire de contact simple, le client rempli ses coordonnées complètes et vous envoi un message via l'interface du site.
+									<br>
+									Sur un formulaire complexe, nous insérons plusieurs valeurs dans des champs (à remplir ou à
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            cocher).</div>
+							</div>
+							<img src="{{asset('asset/img/58af54b38a538.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select formulaire">
+								<option value="70|0|11">Formulaire simple et classique
+								</option>
+								<option value="71|80|11">Formulaire complexe
+								</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-13" data-id="13">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Souhaitez-vous intégrer un ou des modules multimédia ?
+								</div>
+								<div class="website_question-desc">Insertion d'un fichier audio ou vidéo par exemple.</div>
+							</div>
+							<img src="{{asset('asset/img/58b59c8d6b5ae.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select multimédia">
+								<option value="72|0|12">NON</option>
+								<option value="73|50 |12">OUI avec un son ou une vidéo sur une des pages du site web</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-14" data-id="14">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Souhaitez-vous intégrer un catalogue ?
+								</div>
+								<div class="website_question-desc">L'intégration d'un catalogue produit est une version plus complète du site vitrine. Il présente votre entreprise mais aussi vos produits et services de façon très détaillée avec leur prix et leur référence... Ainsi vous facilitez
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            l'accès à vos offres. Vos visiteurs peuvent choisir celle qui leurs convient et la commander par téléphone, e-mail, fax ou voie postale. Vous travaillez sur un catalogue toujours disponible et évitez l'impression et l'envoi
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            de catalogues papiers. Vous augmentez également votre zone de chalandise et captez plus facilement de nouveaux clients. Le catalogue doit être fourni au format PDF pour une intégration en image / catalogue.
+									<br>
+									<br>
+									A noter : un site catalogue présente vos produits mais ne dispose pas de paiement en ligne (consultez site E-Commerce).<br>
+								</div>
+							</div>
+							<img src="{{asset('asset/img/58b59fbdc8373.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select catalogue">
+								<option value="74|0|13">NON pas de catalogue
+								</option>
+								<option value="75|200|13">OUI insertion d'un catalogue sur une page produit</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-15" data-id="15">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Souhaitez-vous un système de réservation en ligne ?
+								</div>
+								<div class="website_question-desc">Système de réservation avec calendrier pour tous les types d'entreprises.
+									<br>
+									Ce système permet à vos visiteurs de connaître vos disponibilités en temps réel et de reserver en ligne depuis votre propre site Internet.</div>
+							</div>
+							<img src="{{asset('asset/img/58b5a04fc52e5.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select réservation">
+								<option value="76|0|14">NON</option>
+								<option value="77|890|14">OUI insertion d'un système de réservation en ligne
+								</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-16" data-id="16">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Souhaitez-vous des statistiques de fréquentation pour votre site ?
+								</div>
+								<div class="website_question-desc">Les outils de statistiques sont là pour vous aider à connaitre la fréquentation de votre site avec notamment le nombre de visiteurs, le nombre de pages ...<br>
+									Si vous avez un site, il va falloir utiliser des outils qui analysent
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            vos visiteurs afin de savoir si votre site est visité ou non. Les sites d'outils de statistiques sont là pour vous aider à connaitre la fréquentation de votre site avec notamment le nombre de visiteurs, le nombre de pages vues,...<br>
+									<br>
+									En analysant les données que ces outils vont donneront, vous pourrez améliorer votre site internet pour qu'il aie plus de visiteurs.</div>
+							</div>
+							<img src="{{asset('asset/img/58b5abdf4a32c.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select statistiques">
+								<option value="78|0|15">NON</option>
+								<option value="79|40|15">OUI statistiques détaillés</option>
+							</select>
+							<div class="website_response-next">Suivant</div>
+						</div>
+					</div>
+					<div class="website_question" id="website_question-17" data-id="17">
+						<div class="website_question-content">
+							<div class="website_question-title-and-description">
+								<div class="website_question-title">
+									Veuillez s'il vous plaît remplir les informations suivantes...
+									<br>
+								</div>
+								<div class="website_question-desc">
+									<input type="text" name="nom" placeholder="Votre nom" class="form-control">
+									<br>
+									<input type="email" name="email" placeholder="Votre adresse mail" class="form-control">
+									<br>
+									<input type="text" name="telephone" placeholder="Votrenuméro de téléphone" class="form-control">
+								</div>
+							</div>
+							<img src="{{asset('asset/img/58b5abdf4a32c.png')}}" alt="" class="website_question-img">
+						</div>
+						<div class="website_response">
+							<div class="website_response-prev">Précédent</div>
+							<select class="website_response-select">
+								<option value="78|0|15">NON</option>
+								<option value="79|40|15">OUI statistiques détaillés</option>
+							</select>
+							<div class="website_response-next prend">Suivant</div>
+						</div>
+					</div>
+
+					<div class="website_bottom" id="website_bottom">
+						<div class="website_bottom-left">
+							<div class="website_bottom-text">Budget estimatif :</div>
+							<div class="website_bottom-small">* prix HT</div>
+						</div>
+						<div class="website_bottom-right">
+							<div class="website_bottom-price">
+								<input id="total" type="text">
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+				<div class="website_end" id="website_final" data-id="18" style="display:none;">
+					<div class="website_end-title">Voici l’estimation tarifaire pour la création de votre site web : Site vitrine</div>
+					<div class="website_end-table-content">
+						<table class="website_end-table" id="website_end-table">
+							<tr>
+								<td>Souhaitez-vous partir d'une base Template ? (plus économique)</td>
+								<td>
+									<span class="template"></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Nombre de page</td>
+								<td>
+									<span class="nbpages"></span>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Nombre de slide</td>
+								<td>
+									<span class="nbslides"></span>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Souhaitez-vous une ou plusieurs pages administrables ?</td>
+								<td>
+									<span class="nbpageadmin"></span>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Souhaitez-vous une page actualité ?</td>
+								<td>
+									<span class="pageactu"></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Optimisation tablette et mobile</td>
+								<td>
+									<span class="responsive"></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Optimisation au référencement naturel</td>
+								<td>
+									<span class="seo"></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Faut-il prévoir de la rédaction de contenu ?</td>
+								<td>
+									<span class="redaction"></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Possédez-vous un logo ?</td>
+								<td>
+									<span class="logo"></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Souhaitez-vous pouvoir envoyer des E-mailing ou une Newsletter ?</td>
+								<td>
+									<span class="newsletter"></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Souhaitez-vous un système de paiement en ligne ?</td>
+								<td>
+									<span class="commande"></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Souhaitez-vous un formulaire de contact simple ou complexe ?</td>
+								<td>
+									<span class="formulaire"></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Souhaitez-vous intégrer un ou des modules multimédia ?</td>
+								<td>
+									<span class="multimédia"></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Souhaitez-vous intégrer un catalogue ?</td>
+								<td>
+									<span class="catalogue"></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Souhaitez-vous un système de réservation en ligne ?</td>
+								<td>
+									<span class="réservation"></span>
+								</td>
+							</tr>
+							<tr>
+								<td>Souhaitez-vous des statistiques de fréquentation pour votre site ?</td>
+								<td>
+									<span class="statistiques"></span>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="website_end-price">TOTAL HT :
+						<span id="website_end-price">350,00</span>
+						DA</div>
+				</div>
+			</div>
+		</main>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<script>
+			var template = 30000;
+var nbpages = 6500;
+var nbslides = 0;
+var nbpageadmin = 0;
+var pageactu = 0;
+var responsive = 0;
+var seo = 0;
+var redaction = 0;
+var logo = 0;
+var newsletter = 0;
+var commande = 0;
+
+
+$(".prend").click(function () {
+$('#website_etape').hide();
+$("#website_end").show();
+$("#website_final").show();
+});
+if ($('#website_header-item-1').hasClass('rubberBand')) {
+$('.website_bottom-price').append('<span id="website_bottom-price">' + template + ',00 DA</span>');
+$('#total').val(template)
+
+}
+$(".website_response-next").on("click", function () {
+
+$('.website_header-item').each(function () {
+if ($('#website_header-item-1').hasClass('rubberBand')) {
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides)
+}
+});
+});
+
+
+/* Templates */
+
+$('select.template').on('change', function () {
+
+if ($(this).val() == '1') {
+template = 30000
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template) + ',00 DA</span>');
+$('#total').val(template)
+} else if ($(this).val() == '2') {
+template = 5000
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template) + ',00 DA</span>');
+$('#total').val(template)
+}
+
+$('span.template').append($('select.template option:selected').text())
+});
+
+/* Pages */
+
+$('select.nbpages').on('change', function () {
+
+if ($(this).val() == '1') {
+nbpages = 6500 * 1;
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages
+) + ',00 DA</span>');
+$('#total').val(template + nbpages)
+
+}
+if ($(this).val() == '2') {
+nbpages = 6500 * 2
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages
+) + ',00 DA</span>');
+$('#total').val(template + nbpages)
+}
+if ($(this).val() == '3') {
+nbpages = 6500 * 3
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages
+) + ',00 DA</span>');
+$('#total').val(template + nbpages)
+}
+if ($(this).val() == '4') {
+nbpages = 6500 * 4
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages
+) + ',00 DA</span>');
+$('#total').val(template + nbpages)
+}
+if ($(this).val() == '5') {
+nbpages = 6500 * 5
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages
+) + ',00 DA</span>');
+$('#total').val(template + nbpages)
+}
+if ($(this).val() == '6') {
+nbpages = 6500 * 6
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages
+) + ',00 DA</span>');
+$('#total').val(template + nbpages)
+}
+if ($(this).val() == '7') {
+nbpages = 6500 * 7
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages
+) + ',00 DA</span>');
+$('#total').val(template + nbpages)
+}
+if ($(this).val() == '8') {
+nbpages = 6500 * 8
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages
+) + ',00 DA</span>');
+$('#total').val(template + nbpages)
+}
+if ($(this).val() == '9') {
+nbpages = 6500 * 9
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages
+) + ',00 DA</span>');
+$('#total').val(template + nbpages)
+}
+if ($(this).val() == '10') {
+nbpages = 6500 * 10
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages
+) + ',00 DA</span>');
+$('#total').val(template + nbpages)
+}
+if ($(this).val() == '11') {
+nbpages = 6500 * 11
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages
+) + ',00 DA</span>');
+$('#total').val(template + nbpages)
+}
+if ($(this).val() == '12') {
+nbpages = 6500 * 12
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages
+) + ',00 DA</span>');
+$('#total').val(template + nbpages)
+}
+if ($(this).val() == '13') {
+nbpages = 6500 * 13
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages
+) + ',00 DA</span>');
+$('#total').val(template + nbpages)
+}
+if ($(this).val() == '14') {
+nbpages = 6500 * 14
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages
+) + ',00 DA</span>');
+$('#total').val(template + nbpages)
+}
+if ($(this).val() == '15') {
+nbpages = 6500 * 15
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages
+) + ',00 DA</span>');
+$('#total').val(template + nbpages)
+}
+
+$('span.nbpages').append($('select.nbpages option:selected').text())
+});
+
+/* Slides */
+$('select.nbslides').on('change', function () {
+
+if ($(this).val() == '0') {
+nbslides = 0
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides)
+}
+if ($(this).val() == '1') {
+nbslides = 2000 * 1
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides)
+}
+if ($(this).val() == '2') {
+nbslides = 2000 * 2
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides)
+}
+if ($(this).val() == '3') {
+nbslides = 2000 * 3
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides)
+}
+if ($(this).val() == '4') {
+nbslides = 2000 * 4
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides)
+}
+if ($(this).val() == '5') {
+nbslides = 2000 * 5
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides)
+}
+if ($(this).val() == '6') {
+nbslides = 2000 * 6
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides)
+}
+if ($(this).val() == '7') {
+nbslides = 2000 * 7
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides)
+}
+
+if ($(this).val() == '8') {
+nbslides = 2000 * 8
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides)
+}
+if ($(this).val() == '9') {
+nbslides = 2000 * 9
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides)
+}
+if ($(this).val() == '10') {
+nbslides = 2000 * 10
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides)
+}
+
+$('span.nbslides').append($('select.nbslides option:selected').text())
+});
+
+/* Pages administrable */
+
+$('select.nbpageadmin').on('change', function () {
+
+if ($(this).val() == '0') {
+nbpageadmin = 0
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin)
+} else if ($(this).val() == '1') {
+nbpageadmin = 12000 * 1
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin)
+}
+if ($(this).val() == '2') {
+nbpageadmin = 12000 * 2
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin)
+}
+if ($(this).val() == '3') {
+nbpageadmin = 12000 * 3
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin)
+}
+if ($(this).val() == '4') {
+nbpageadmin = 12000 * 4
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin)
+}
+if ($(this).val() == '5') {
+nbpageadmin = 12000 * 5
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin)
+}
+if ($(this).val() == '6') {
+nbpageadmin = 12000 * 6
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin)
+}
+if ($(this).val() == '7') {
+nbpageadmin = 12000 * 7
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin)
+}
+if ($(this).val() == '8') {
+nbpageadmin = 12000 * 8
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin)
+}
+
+$('span.nbpageadmin').append($('select.nbpageadmin option:selected').text())
+
+});
+
+/* Acctualité*/
+$('select.pageactu').on('change', function () {
+
+if ($(this).val() == '0') {
+pageactu = 0
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu)
+}
+if ($(this).val() == '1') {
+pageactu = 30000
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu)
+}
+
+
+$('span.pageactu').append($('select.pageactu option:selected').text())
+});
+
+/* Responsive */
+$('select.responsive').on('change', function () {
+
+if ($(this).val() == '0') {
+responsive = 0
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive)
+}
+if ($(this).val() == '1') {
+responsive = 6000 * 1
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive)
+}
+if ($(this).val() == '2') {
+responsive = 6000 * 2
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive)
+}
+if ($(this).val() == '3') {
+responsive = 6000 * 3
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive)
+}
+if ($(this).val() == '4') {
+responsive = 6000 * 4
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive)
+}
+if ($(this).val() == '5') {
+responsive = 6000 * 5
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive)
+}
+if ($(this).val() == '6') {
+responsive = 6000 * 6
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive)
+}
+if ($(this).val() == '7') {
+responsive = 6000 * 7
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive)
+}
+
+$('span.responsive').append($('select.responsive option:selected').text())
+});
+
+/* SEO */
+$('select.seo').on('change', function () {
+
+if ($(this).val() == '0') {
+seo = 0
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo)
+}
+if ($(this).val() == '1') {
+seo = 15000 * 1
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo)
+}
+if ($(this).val() == '2') {
+seo = 15000 * 2
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo)
+}
+if ($(this).val() == '3') {
+seo = 15000 * 3
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo)
+}
+if ($(this).val() == '4') {
+seo = 15000 * 4
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo)
+}
+if ($(this).val() == '5') {
+seo = 15000 * 5
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo)
+}
+if ($(this).val() == '6') {
+seo = 15000 * 6
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo)
+}
+if ($(this).val() == '7') {
+seo = 15000 * 7
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo)
+}
+if ($(this).val() == '8') {
+seo = 15000 * 8
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo)
+}
+
+$('span.seo').append($('select.seo option:selected').text())
+});
+
+/*Rédaction*/
+$('select.redaction').on('change', function () {
+
+if ($(this).val() == '0') {
+redaction = 0
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction)
+}
+if ($(this).val() == '1') {
+redaction = 3000 * 1
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction)
+}
+if ($(this).val() == '2') {
+redaction = 3000 * 2
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction)
+}
+if ($(this).val() == '3') {
+redaction = 3000 * 3
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction)
+}
+if ($(this).val() == '4') {
+redaction = 3000 * 4
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction)
+}
+if ($(this).val() == '5') {
+redaction = 3000 * 5
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction)
+}
+if ($(this).val() == '6') {
+redaction = 3000 * 6
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction)
+}
+if ($(this).val() == '7') {
+redaction = 3000 * 7
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction)
+}
+if ($(this).val() == '8') {
+redaction = 3000 * 8
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction)
+}
+
+$('span.redaction').append($('select.redaction option:selected').text())
+});
+
+/* Logo */
+
+$('select.logo').on('change', function () {
+
+if ($(this).val() == '0') {
+logo = 0
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction + logo
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction + logo)
+}
+if ($(this).val() == '1') {
+logo = 6000
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction + logo
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction + logo)
+}
+
+$('span.logo').append($('select.logo option:selected').text())
+});
+
+/* Newsletter */
+
+$('select.newsletter').on('change', function () {
+
+if ($(this).val() == '0') {
+newsletter = 0
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction + logo + newsletter
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction + logo + newsletter)
+}
+if ($(this).val() == '1') {
+newsletter = 15000
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction + logo + newsletter
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction + logo + newsletter)
+}
+
+$('span.newsletter').append($('select.newsletter option:selected').text())
+});
+
+/* Commande */
+
+$('select.commande').on('change', function () {
+
+if ($(this).val() == '0') {
+commande = 0
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction + logo + newsletter + commande
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction + logo + newsletter + commande)
+}
+if ($(this).val() == '1') {
+commande = 10000
+$('#website_bottom-price').remove();
+$('.website_bottom-price').append('<span id="website_bottom-price">' + (
+template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction + logo + newsletter + commande
+) + ',00 DA</span>');
+$('#total').val(template + nbpages + nbslides + nbpageadmin + pageactu + responsive + seo + redaction + logo + newsletter + commande)
+}
+$('span.commande').append($('select.commande option:selected').text())
+});
+		</script>
+
+
+{% endblock %}

@@ -266,6 +266,14 @@ class AccueilController extends AbstractController
    
         ]);
     }
+    #[Route('/devis/site-vitrine', name: 'app_calcule_vitrine')]
+    public function devisid(Request $request,$id)
+    {
+
+        return $this->render('calcules.html.twig', [
+   
+        ]);
+    }
     #[Route('/contact', name: 'app_contact')]
     public function contact()
     {
