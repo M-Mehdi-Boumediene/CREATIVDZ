@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DevisSiteVitrine{% endblock %}
+
+{% block body %}
+    <h1>DevisSiteVitrine</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ devis_site_vitrine.id }}</td>
+            </tr>
+            <tr>
+                <th>Template</th>
+                <td>{{ devis_site_vitrine.template }}</td>
+            </tr>
+            <tr>
+                <th>Nbpages</th>
+                <td>{{ devis_site_vitrine.nbpages }}</td>
+            </tr>
+            <tr>
+                <th>Nbslides</th>
+                <td>{{ devis_site_vitrine.nbslides }}</td>
+            </tr>
+            <tr>
+                <th>Administration</th>
+                <td>{{ devis_site_vitrine.administration }}</td>
+            </tr>
+            <tr>
+                <th>Actualite</th>
+                <td>{{ devis_site_vitrine.actualite }}</td>
+            </tr>
+            <tr>
+                <th>Responsive</th>
+                <td>{{ devis_site_vitrine.responsive }}</td>
+            </tr>
+            <tr>
+                <th>Referencement</th>
+                <td>{{ devis_site_vitrine.referencement }}</td>
+            </tr>
+            <tr>
+                <th>Redaction</th>
+                <td>{{ devis_site_vitrine.redaction }}</td>
+            </tr>
+            <tr>
+                <th>Logo</th>
+                <td>{{ devis_site_vitrine.logo }}</td>
+            </tr>
+            <tr>
+                <th>Emailing</th>
+                <td>{{ devis_site_vitrine.emailing }}</td>
+            </tr>
+            <tr>
+                <th>Paiement</th>
+                <td>{{ devis_site_vitrine.paiement }}</td>
+            </tr>
+            <tr>
+                <th>Formcomplex</th>
+                <td>{{ devis_site_vitrine.formcomplex }}</td>
+            </tr>
+            <tr>
+                <th>Multimedia</th>
+                <td>{{ devis_site_vitrine.multimedia }}</td>
+            </tr>
+            <tr>
+                <th>Catalogue</th>
+                <td>{{ devis_site_vitrine.catalogue }}</td>
+            </tr>
+            <tr>
+                <th>Reservation</th>
+                <td>{{ devis_site_vitrine.reservation }}</td>
+            </tr>
+            <tr>
+                <th>Statistiques</th>
+                <td>{{ devis_site_vitrine.statistiques }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_devis_site_vitrine_index') }}">back to list</a>
+
+    <a href="{{ path('app_devis_site_vitrine_edit', {'id': devis_site_vitrine.id}) }}">edit</a>
+
+    {{ include('devis_site_vitrine/_delete_form.html.twig') }}
+{% endblock %}

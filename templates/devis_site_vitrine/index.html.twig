@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DevisSiteVitrine index{% endblock %}
+
+{% block body %}
+    <h1>DevisSiteVitrine index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Template</th>
+                <th>Nbpages</th>
+                <th>Nbslides</th>
+                <th>Administration</th>
+                <th>Actualite</th>
+                <th>Responsive</th>
+                <th>Referencement</th>
+                <th>Redaction</th>
+                <th>Logo</th>
+                <th>Emailing</th>
+                <th>Paiement</th>
+                <th>Formcomplex</th>
+                <th>Multimedia</th>
+                <th>Catalogue</th>
+                <th>Reservation</th>
+                <th>Statistiques</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for devis_site_vitrine in devis_site_vitrines %}
+            <tr>
+                <td>{{ devis_site_vitrine.id }}</td>
+                <td>{{ devis_site_vitrine.template }}</td>
+                <td>{{ devis_site_vitrine.nbpages }}</td>
+                <td>{{ devis_site_vitrine.nbslides }}</td>
+                <td>{{ devis_site_vitrine.administration }}</td>
+                <td>{{ devis_site_vitrine.actualite }}</td>
+                <td>{{ devis_site_vitrine.responsive }}</td>
+                <td>{{ devis_site_vitrine.referencement }}</td>
+                <td>{{ devis_site_vitrine.redaction }}</td>
+                <td>{{ devis_site_vitrine.logo }}</td>
+                <td>{{ devis_site_vitrine.emailing }}</td>
+                <td>{{ devis_site_vitrine.paiement }}</td>
+                <td>{{ devis_site_vitrine.formcomplex }}</td>
+                <td>{{ devis_site_vitrine.multimedia }}</td>
+                <td>{{ devis_site_vitrine.catalogue }}</td>
+                <td>{{ devis_site_vitrine.reservation }}</td>
+                <td>{{ devis_site_vitrine.statistiques }}</td>
+                <td>
+                    <a href="{{ path('app_devis_site_vitrine_show', {'id': devis_site_vitrine.id}) }}">show</a>
+                    <a href="{{ path('app_devis_site_vitrine_edit', {'id': devis_site_vitrine.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="18">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_devis_site_vitrine_new') }}">Create new</a>
+{% endblock %}
