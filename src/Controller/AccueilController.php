@@ -6,6 +6,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\HttpKernel\Attribute\Cache;
+use App\Entity\DevisSiteVitrine;
+use App\Form\DevisSiteVitrineType;
+use App\Repository\DevisSiteVitrineRepository;
+use Doctrine\ORM\EntityManagerInterface;
 
 class AccueilController extends AbstractController
 {
@@ -266,12 +270,24 @@ class AccueilController extends AbstractController
    
         ]);
     }
-    #[Route('/devis/site-vitrine', name: 'app_calcule_vitrine')]
-    public function devisid()
+    #[Route('/devis/site-vitrine', name: 'app_calcule_vitrine', methods: ['GET', 'POST'])]
+    public function devisid(Request $request, EntityManagerInterface $entityManager): Response
     {
+        $devisSiteVitrine = new DevisSiteVitrine();
+        $form = $this->createForm(DevisSiteVitrineType::class, $devisSiteVitrine);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->persist($devisSiteVitrine);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('app_calcule_vitrine', [], Response::HTTP_SEE_OTHER);
+        }
+     
 
         return $this->render('calcules.html.twig', [
-   
+            'devis_site_vitrine' => $devisSiteVitrine,
+            'form' => $form,
         ]);
     }
     #[Route('/contact', name: 'app_contact')]
