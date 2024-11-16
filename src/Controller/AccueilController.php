@@ -10,6 +10,8 @@ use App\Entity\DevisSiteVitrine;
 use App\Form\DevisSiteVitrineType;
 use App\Repository\DevisSiteVitrineRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class AccueilController extends AbstractController
 {
