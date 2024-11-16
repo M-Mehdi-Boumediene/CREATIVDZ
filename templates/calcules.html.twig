@@ -3,7 +3,26 @@
 
 
 	<link rel="stylesheet" href="{{asset('asset/css/def1.css')}}">
-
+<style>
+.submit{
+	width: 25%;
+    height: 40px;
+    line-height: 38px;
+    background: #079edb;
+    color: #fff;
+    font-family: Open Sans, arial, helvetica, sans-serif;
+    font-weight: 600;
+    border: 1px solid #0080b2;
+    margin-right: 17px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+</style>
 
 {% endblock %}
 {% block body %}
@@ -435,7 +454,7 @@
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
 
-							<button class="website_response-next prend">{{ button_label|default('Envoyer') }}</button>
+							<button class="submit">{{ button_label|default('Envoyer') }}</button>
 
 						</div>
 					</div>
