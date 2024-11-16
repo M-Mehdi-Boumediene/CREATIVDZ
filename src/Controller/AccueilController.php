@@ -5,9 +5,11 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\HttpKernel\Attribute\Cache;
 
 class AccueilController extends AbstractController
 {
+    #[Cache(public: true, maxage: 3600, mustRevalidate: true)]
     #[Route('/', name: 'app_accueil')]
     public function index()
     {
