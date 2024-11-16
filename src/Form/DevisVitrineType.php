@@ -14,9 +14,10 @@ class DevisVitrineType extends AbstractType
         $builder
         ->add('isAttending', ChoiceType::class, [
             'choices'  => [
-                'Maybe' => null,
-                'Yes' => true,
-                'No' => false,
+                'Oui' => "Oui",
+                'NON je préfère un codage personnalisé' => "NON je préfère un codage personnalisé",
+           
+                
             ],
         ]);
     }

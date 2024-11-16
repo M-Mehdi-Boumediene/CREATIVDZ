@@ -7,19 +7,14 @@
 
 {% endblock %}
 {% block body %}
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
 
-<div class="header-overflow" id="header-overflow"></div>
+	<div class="header-overflow" id="header-overflow"></div>
 	<main>
 		<div class="content">
 			<div class="website_title">Quel prix pour un site internet professionnel ?
 			</div>
 			<div class="website_etape-content">
 				<div class="website_etape" id="website_etape">Etape 1</div>
-				<div class="website_end" id="website_end" style="position: absolute;top: -200px;right: 0;color: #e3e6e9;font-weight: 600;font-size: 125px;line-height: 125px;z-index: 0;">Récapitulatif</div>
 
 			</div>
 			<div class="website" id="website">
@@ -45,6 +40,7 @@
 						<div class="website_header-item" id="website_header-item-17">17</div>
 					</div>
 				</div>
+				{{ form_start(form) }}
 				<div class="website_questions" id="website_questions">
 					<div class="website_question" id="website_question-1" data-id="1">
 						<div class="website_question-content">
@@ -56,19 +52,17 @@
 									<br>
 									<br>
 									Appliqué à la création de site Internet, un Template ou thème ou encore modèle graphique est un moyen de séparer le contenu rédactionnel (contenu textuel) de la forme (la manière dont il est présenté). Un Template fait
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            donc office de gabarit (modèle) où seuls certains éléments sont modifiables (le contenu texte, les images, les couleurs et le fond).<br>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													                            donc office de gabarit (modèle) où seuls certains éléments sont modifiables (le contenu texte, les images, les couleurs et le fond).<br>
 									<br>
 								</div>
 							</div>
-							<img src="{{asset('asset/tmp/website/5ed4bd582de3c.png')}}" alt="" class="website_question-img">
+							<img src="{{asset('asset/img/5ed4bd582de3c.png')}}" alt="" class="website_question-img">
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select template">
-								<option value="1">NON je préfère un codage personnalisé
-								</option>
-								<option value="2">oui</option>
-							</select>
+							{{ form_widget(form.template,{'attr': {'class': 'website_response-select template'}}) }}
+							{{ form_errors(form.template) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
@@ -82,42 +76,15 @@
 									<br>
 									Les pages : "contact" et "mentions légales" ne doivent pas être comptabilisées.<br>
 									(ex : Accueil + Nos produits + Nos réalisations + Nos références + Contact
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            = 4 pages)</div>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													                            = 4 pages)</div>
 							</div>
 							<img src="{{asset('asset/img/58ab0acec1a10.png')}}" alt="" class="website_question-img">
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select nbpages">
-								<option value="1">1 page accueil seule
-								</option>
-								<option value="2">2 pages
-								</option>
-								<option value="3">3 pages</option>
-								<option value="4">4 pages</option>
-								<option value="5">5 pages
-								</option>
-								<option value="6">6 pages
-								</option>
-								<option value="7">7 pages
-								</option>
-								<option value="8">8 pages
-								</option>
-								<option value="9">9 pages
-								</option>
-								<option value="10">10 pages
-								</option>
-								<option value="11">11 pages
-								</option>
-								<option value="12">12 pages
-								</option>
-								<option value="13">13 pages
-								</option>
-								<option value="14">14 pages
-								</option>
-								<option value="15">15 pages
-								</option>
-							</select>
+							{{ form_widget(form.nbpages,{'attr': {'class': 'website_response-select nbpages'}}) }}
+							{{ form_errors(form.nbpages) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
@@ -130,7 +97,7 @@
 								<div class="website_question-desc">Combien de message d'accroche souhaiteriez-vous voir apparaitre à l'accueil de votre site ?
 									<br>
 									Le Slide désigne ici une diapositive, et par extension les images projetées à l'accueil de votre site web. Généralement nous concevons
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            3 à 6 slides pour
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													                            3 à 6 slides pour
 									<br>
 									animer l'accueil et faire passer les messages les plus importants.
 								</div>
@@ -139,27 +106,9 @@
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select nbslides">
-								<option value="0">Pas de slide d'accueil</option>
-								<option value="1">1 slide</option>
-								<option value="2">2 slides</option>
-								<option value="3">3 slides
-								</option>
-								<option value="4">4 slides
-								</option>
-								<option value="5">5 slides
-								</option>
-								<option value="6">6 slides
-								</option>
-								<option value="7">7 slides
-								</option>
-								<option value="8">8 slides
-								</option>
-								<option value="9">9 slides
-								</option>
-								<option value="10">10 slides
-								</option>
-							</select>
+							{{ form_widget(form.nbslides,{'attr': {'class': 'website_response-select nbslides'}}) }}
+							{{ form_errors(form.nbslides) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
@@ -171,7 +120,7 @@
 								</div>
 								<div class="website_question-desc">Appliqué aux sites web dynamiques, le terme back office désigne l'interface permettant de gérer le contenu d'un site dynamique (bien souvent un CMS).<br>
 									Vous aurez donc la possibilité de modifier certains contenus sur le nombre
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            de page défini.
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													                            de page défini.
 									<br>
 									Exemple : galerie d'images / nos réalisations</div>
 							</div>
@@ -179,25 +128,10 @@
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select nbpageadmin">
-								<option value="0">Pas de page administrable</option>
-								<option value="1">1 page administrable
-								</option>
-								<option value="2">2 pages administrables
-								</option>
-								<option value="3">3  pages administrables
-								</option>
-								<option value="4">4  pages administrables
-								</option>
-								<option value="5">5  pages administrables
-								</option>
-								<option value="6">6 pages administrables
-								</option>
-								<option value="7">7  pages administrables
-								</option>
-								<option value="8">8 pages administrables
-								</option>
-							</select>
+
+							{{ form_widget(form.administration,{'attr': {'class': 'website_response-select nbslides'}}) }}
+							{{ form_errors(form.administration) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
@@ -209,7 +143,7 @@
 								</div>
 								<div class="website_question-desc">Il existe quatre types de contenus qui feront ainsi vivre votre site :<br>
 									- Premièrement les contenus aspirationnels: des articles sur l'expérience utilisateur autour de votre marque, des guides, des tutoriaux, des listes de références,
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            etc.
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													                            etc.
 									<br>
 									- Deuxièmement, des contenus relationnels: des témoignages, des études de cas, des avis d'experts, de l'humain donc !
 									<br>
@@ -227,11 +161,9 @@
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select pageactu">
-								<option value="0">Pas de page actualité</option>
-								<option value="1">1 page actualité
-								</option>
-							</select>
+							{{ form_widget(form.actualite,{'attr': {'class': 'website_response-select pageactu'}}) }}
+							{{ form_errors(form.actualite) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
@@ -242,23 +174,16 @@
 									Optimisation tablette et mobile
 								</div>
 								<div class="website_question-desc">Un site web adaptatif (anglais RWD pour responsive web design, conception de sites web adaptatifs selon l'OQLF) est un site web dont la conception vise, grâce à différents principes et techniques, à offrir une consultation confortable
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            même pour des supports différents.</div>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													                            même pour des supports différents.</div>
 							</div>
 							<img src="{{asset('asset/img/58af49c13a33e.png')}}" alt="" class="website_question-img">
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select responsive">
-								<option value="0">SANS - Optimisation au format / simple
-								</option>
-								<option value="1">Optimisation 1 pages</option>
-								<option value="2">Optimisation 2 pages</option>
-								<option value="3">Optimisation 3 pages</option>
-								<option value="4">Optimisation 4 pages</option>
-								<option value="5">Optimisation 5 pages</option>
-								<option value="6">Optimisation 6 pages</option>
-								<option value="7">Optimisation 7 pages</option>
-							</select>
+
+							{{ form_widget(form.responsive,{'attr': {'class': 'website_response-select responsive'}}) }}
+							{{ form_errors(form.responsive) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
@@ -271,8 +196,10 @@
 								<div class="website_question-desc">Ce pack permet d'avoir l'essentiel pour un bon référencement naturel pour un site web vitrine ou e-commerce. Il vous permet d'optimiser votre positionnement dans les moteurs de recherche.
 									<br>
 									<br>
-									- Réécriture d'URL (URL rewriting)
-									<br>
+									- Optimisation performance & rapidité du site<br>
+									- Optimisation des bonnes pratiques<br>
+									- Optimisation Experience utilisateur /mobile<br>
+									- Mise en place du cache / CDN ...<br>
 									- Optimisation des Meta (description, titre, mots clefs)<br>
 									- Optimisation de la structure du site (balises H1, H2, Strong …)<br>
 									- Mise en place du fichier sitemap XML et robots.txt<br>
@@ -285,17 +212,9 @@
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select seo">
-								<option value="0">Sans référencement</option>
-								<option value="1">Référencement simple 1 page</option>
-								<option value="2">Référencement simple 2 pages</option>
-								<option value="3">Référencement simple 3 pages</option>
-								<option value="4">Référencement simple 4 pages</option>
-								<option value="5">Référencement simple 5 pages</option>
-								<option value="6">Référencement simple 6 pages</option>
-								<option value="7">Référencement simple 7 pages</option>
-								<option value="8">Référencement simple 8 pages</option>
-							</select>
+							{{ form_widget(form.referencement,{'attr': {'class': 'website_response-select seo'}}) }}
+							{{ form_errors(form.referencement) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
@@ -306,29 +225,19 @@
 									Faut-il prévoir de la rédaction de contenu ?
 								</div>
 								<div class="website_question-desc">La création de contenu pour votre site web est une composante très importante pour le référencement de votre entreprise auprès de vos futurs prospects. En effet, grâce a un contenu textuel bien fourni, vous allez pouvoir référencer
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            vos pages et devenir visible sur les moteurs de recherche !<br>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													                            vos pages et devenir visible sur les moteurs de recherche !<br>
 									<br>
 									Pourquoi investir dans la création de contenu ?<br>
 									Le contenu de votre site Internet va avoir plusieurs utilités. Il va permettre dans un premier temps de vendre votre savoir-faire et vos produits aux visiteurs de votre
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            site. Il va également permettre de gagner en visibilité sur les moteurs de recherche. Vous serrez présent là où des prospects recherchent l'information.</div>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													                            site. Il va également permettre de gagner en visibilité sur les moteurs de recherche. Vous serrez présent là où des prospects recherchent l'information.</div>
 							</div>
 							<img src="{{asset('asset/img/58af4b506290b.png')}}" alt="" class="website_question-img">
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select redaction">
-								<option value="0">NON tout sera fourni et préparé correctement
-								</option>
-								<option value="1">Textes à retravailler sur 1 page
-								</option>
-								<option value="2">Textes à retravailler sur 2 pages</option>
-								<option value="3">Textes à retravailler sur 3 pages</option>
-								<option value="4">Textes à retravailler sur 4 pages</option>
-								<option value="5">Textes à retravailler sur 5 pages</option>
-								<option value="6">Textes à retravailler sur 6 pages</option>
-								<option value="7">Textes à retravailler sur 7 pages</option>
-								<option value="8">Textes à retravailler sur 8 pages</option>
-							</select>
+							{{ form_widget(form.redaction,{'attr': {'class': 'website_response-select redaction'}}) }}
+							{{ form_errors(form.redaction) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
@@ -347,10 +256,10 @@
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select logo">
-								<option value="0">Oui</option>
-								<option value="1">NON le logo est à créer en même temps</option>
-							</select>
+
+							{{ form_widget(form.logo,{'attr': {'class': 'website_response-select logo'}}) }}
+							{{ form_errors(form.logo) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
@@ -361,17 +270,17 @@
 									Souhaitez-vous pouvoir envoyer des E-mailing ou une Newsletter ?
 								</div>
 								<div class="website_question-desc">Le terme de newsletter désigne généralement un e-mail à vocation commerciale et publicitaire envoyé périodiquement à des prospects ou clients abonnés. Le contenu de la newsletter peut être simplement constitué d'une sélection de
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            produits ou avoir un contenu éditorial (lettre d'informations au sens strict). Renseignez-vous à l'agence pour plus de détails.
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													                            produits ou avoir un contenu éditorial (lettre d'informations au sens strict). Renseignez-vous à l'agence pour plus de détails.
 								</div>
 							</div>
 							<img src="{{asset('asset/img/58af51cec825f.png')}}" alt="" class="website_question-img">
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select newsletter">
-								<option value="0">SANS système de Newsletter</option>
-								<option value="1">AVEC système de Newsletter</option>
-							</select>
+
+							{{ form_widget(form.emailing,{'attr': {'class': 'website_response-select newsletter'}}) }}
+							{{ form_errors(form.emailing) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
@@ -390,13 +299,9 @@
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select commande">
-								<option value="0">NON pas de système de commande en ligne</option>
-								<option value="1">AVEC système de commande en ligne sur une page
-								</option>
-								<option value="2">AVEC système de commande en ligne sur 2 pages
-								</option>
-							</select>
+							{{ form_widget(form.paiement,{'attr': {'class': 'website_response-select commande'}}) }}
+							{{ form_errors(form.paiement) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
@@ -409,18 +314,15 @@
 								<div class="website_question-desc">Sur un formulaire de contact simple, le client rempli ses coordonnées complètes et vous envoi un message via l'interface du site.
 									<br>
 									Sur un formulaire complexe, nous insérons plusieurs valeurs dans des champs (à remplir ou à
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            cocher).</div>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													                            cocher).</div>
 							</div>
 							<img src="{{asset('asset/img/58af54b38a538.png')}}" alt="" class="website_question-img">
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select formulaire">
-								<option value="70|0|11">Formulaire simple et classique
-								</option>
-								<option value="71|80|11">Formulaire complexe
-								</option>
-							</select>
+							{{ form_widget(form.formcomplex,{'attr': {'class': 'website_response-select formulaire'}}) }}
+							{{ form_errors(form.formcomplex) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
@@ -436,10 +338,10 @@
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select multimédia">
-								<option value="72|0|12">NON</option>
-								<option value="73|50 |12">OUI avec un son ou une vidéo sur une des pages du site web</option>
-							</select>
+
+							{{ form_widget(form.multimedia,{'attr': {'class': 'website_response-select multimédia'}}) }}
+							{{ form_errors(form.multimedia) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
@@ -450,8 +352,8 @@
 									Souhaitez-vous intégrer un catalogue ?
 								</div>
 								<div class="website_question-desc">L'intégration d'un catalogue produit est une version plus complète du site vitrine. Il présente votre entreprise mais aussi vos produits et services de façon très détaillée avec leur prix et leur référence... Ainsi vous facilitez
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            l'accès à vos offres. Vos visiteurs peuvent choisir celle qui leurs convient et la commander par téléphone, e-mail, fax ou voie postale. Vous travaillez sur un catalogue toujours disponible et évitez l'impression et l'envoi
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            de catalogues papiers. Vous augmentez également votre zone de chalandise et captez plus facilement de nouveaux clients. Le catalogue doit être fourni au format PDF pour une intégration en image / catalogue.
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													                            l'accès à vos offres. Vos visiteurs peuvent choisir celle qui leurs convient et la commander par téléphone, e-mail, fax ou voie postale. Vous travaillez sur un catalogue toujours disponible et évitez l'impression et l'envoi
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													                            de catalogues papiers. Vous augmentez également votre zone de chalandise et captez plus facilement de nouveaux clients. Le catalogue doit être fourni au format PDF pour une intégration en image / catalogue.
 									<br>
 									<br>
 									A noter : un site catalogue présente vos produits mais ne dispose pas de paiement en ligne (consultez site E-Commerce).<br>
@@ -461,11 +363,9 @@
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select catalogue">
-								<option value="74|0|13">NON pas de catalogue
-								</option>
-								<option value="75|200|13">OUI insertion d'un catalogue sur une page produit</option>
-							</select>
+							{{ form_widget(form.catalogue,{'attr': {'class': 'website_response-select catalogue'}}) }}
+							{{ form_errors(form.catalogue) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
@@ -483,11 +383,9 @@
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select réservation">
-								<option value="76|0|14">NON</option>
-								<option value="77|890|14">OUI insertion d'un système de réservation en ligne
-								</option>
-							</select>
+							{{ form_widget(form.reservation,{'attr': {'class': 'website_response-select réservation'}}) }}
+							{{ form_errors(form.reservation) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
@@ -499,7 +397,7 @@
 								</div>
 								<div class="website_question-desc">Les outils de statistiques sont là pour vous aider à connaitre la fréquentation de votre site avec notamment le nombre de visiteurs, le nombre de pages ...<br>
 									Si vous avez un site, il va falloir utiliser des outils qui analysent
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                            vos visiteurs afin de savoir si votre site est visité ou non. Les sites d'outils de statistiques sont là pour vous aider à connaitre la fréquentation de votre site avec notamment le nombre de visiteurs, le nombre de pages vues,...<br>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													                            vos visiteurs afin de savoir si votre site est visité ou non. Les sites d'outils de statistiques sont là pour vous aider à connaitre la fréquentation de votre site avec notamment le nombre de visiteurs, le nombre de pages vues,...<br>
 									<br>
 									En analysant les données que ces outils vont donneront, vous pourrez améliorer votre site internet pour qu'il aie plus de visiteurs.</div>
 							</div>
@@ -507,13 +405,13 @@
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select statistiques">
-								<option value="78|0|15">NON</option>
-								<option value="79|40|15">OUI statistiques détaillés</option>
-							</select>
+							{{ form_widget(form.statistiques,{'attr': {'class': 'website_response-select statistiques'}}) }}
+							{{ form_errors(form.statistiques) }}
+
 							<div class="website_response-next">Suivant</div>
 						</div>
 					</div>
+
 					<div class="website_question" id="website_question-17" data-id="17">
 						<div class="website_question-content">
 							<div class="website_question-title-and-description">
@@ -522,158 +420,40 @@
 									<br>
 								</div>
 								<div class="website_question-desc">
-									<input type="text" name="nom" placeholder="Votre nom" class="form-control">
-									<br>
-									<input type="email" name="email" placeholder="Votre adresse mail" class="form-control">
-									<br>
-									<input type="text" name="telephone" placeholder="Votrenuméro de téléphone" class="form-control">
+									<br><br>
+									{{ form_widget(form.nom,{'attr': {'class': 'website_response-select template'}}) }}
+									{{ form_errors(form.nom) }}
+									<br><br>
+									{{ form_widget(form.email,{'attr': {'class': 'website_response-select template'}}) }}
+									{{ form_errors(form.email) }}
+									<br><br>
+									{{ form_widget(form.tel,{'attr': {'class': 'website_response-select template'}}) }}
+									{{ form_errors(form.tel) }}
 								</div>
 							</div>
-							<img src="{{asset('asset/img/58b5abdf4a32c.png')}}" alt="" class="website_question-img">
 						</div>
 						<div class="website_response">
 							<div class="website_response-prev">Précédent</div>
-							<select class="website_response-select">
-								<option value="78|0|15">NON</option>
-								<option value="79|40|15">OUI statistiques détaillés</option>
-							</select>
-							<div class="website_response-next prend">Suivant</div>
-						</div>
-					</div>
 
-					<div class="website_bottom" id="website_bottom">
-						<div class="website_bottom-left">
-							<div class="website_bottom-text">Budget estimatif :</div>
-							<div class="website_bottom-small">* prix HT</div>
-						</div>
-						<div class="website_bottom-right">
-							<div class="website_bottom-price">
-								<input id="total" type="text">
-							</div>
+							<button class="website_response-next prend">{{ button_label|default('Envoyer') }}</button>
+
 						</div>
 					</div>
 
 
 				</div>
-
-				<div class="website_end" id="website_final" data-id="18" style="display:none;">
-					<div class="website_end-title">Voici l’estimation tarifaire pour la création de votre site web : Site vitrine</div>
-					<div class="website_end-table-content">
-						<table class="website_end-table" id="website_end-table">
-							<tr>
-								<td>Souhaitez-vous partir d'une base Template ? (plus économique)</td>
-								<td>
-									<span class="template"></span>
-								</td>
-							</tr>
-							<tr>
-								<td>Nombre de page</td>
-								<td>
-									<span class="nbpages"></span>
-								</td>
-							</tr>
-
-							<tr>
-								<td>Nombre de slide</td>
-								<td>
-									<span class="nbslides"></span>
-								</td>
-							</tr>
-
-							<tr>
-								<td>Souhaitez-vous une ou plusieurs pages administrables ?</td>
-								<td>
-									<span class="nbpageadmin"></span>
-								</td>
-							</tr>
-
-							<tr>
-								<td>Souhaitez-vous une page actualité ?</td>
-								<td>
-									<span class="pageactu"></span>
-								</td>
-							</tr>
-							<tr>
-								<td>Optimisation tablette et mobile</td>
-								<td>
-									<span class="responsive"></span>
-								</td>
-							</tr>
-							<tr>
-								<td>Optimisation au référencement naturel</td>
-								<td>
-									<span class="seo"></span>
-								</td>
-							</tr>
-							<tr>
-								<td>Faut-il prévoir de la rédaction de contenu ?</td>
-								<td>
-									<span class="redaction"></span>
-								</td>
-							</tr>
-							<tr>
-								<td>Possédez-vous un logo ?</td>
-								<td>
-									<span class="logo"></span>
-								</td>
-							</tr>
-							<tr>
-								<td>Souhaitez-vous pouvoir envoyer des E-mailing ou une Newsletter ?</td>
-								<td>
-									<span class="newsletter"></span>
-								</td>
-							</tr>
-							<tr>
-								<td>Souhaitez-vous un système de paiement en ligne ?</td>
-								<td>
-									<span class="commande"></span>
-								</td>
-							</tr>
-							<tr>
-								<td>Souhaitez-vous un formulaire de contact simple ou complexe ?</td>
-								<td>
-									<span class="formulaire"></span>
-								</td>
-							</tr>
-							<tr>
-								<td>Souhaitez-vous intégrer un ou des modules multimédia ?</td>
-								<td>
-									<span class="multimédia"></span>
-								</td>
-							</tr>
-							<tr>
-								<td>Souhaitez-vous intégrer un catalogue ?</td>
-								<td>
-									<span class="catalogue"></span>
-								</td>
-							</tr>
-							<tr>
-								<td>Souhaitez-vous un système de réservation en ligne ?</td>
-								<td>
-									<span class="réservation"></span>
-								</td>
-							</tr>
-							<tr>
-								<td>Souhaitez-vous des statistiques de fréquentation pour votre site ?</td>
-								<td>
-									<span class="statistiques"></span>
-								</td>
-							</tr>
-						</table>
-					</div>
-					<div class="website_end-price">TOTAL HT :
-						<span id="website_end-price">350,00</span>
-						DA</div>
-				</div>
+				{{ form_end(form) }}
 			</div>
+
+
 		</main>
-        <script src="{{asset('asset/js/def1.js')}}"></script>
-<script src="{{asset('asset/js/min/app.minc61c.js?id=e8617fbfb7694bb14a80514d77aa7472ab6376a1')}}" async></script>
+		<script src="{{asset('asset/js/def1.js')}}"></script>
+		<script src="{{asset('asset/js/min/app.minc61c.js?id=e8617fbfb7694bb14a80514d77aa7472ab6376a1')}}" async></script>
 
 
-<noscript id="deferred-styles">
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,600,400italic,700"/>
-</noscript>
+		<noscript id="deferred-styles">
+			<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,600,400italic,700"/>
+		</noscript>
 		<script>
 			var template = 30000;
 var nbpages = 6500;
@@ -1364,4 +1144,4 @@ $('span.commande').append($('select.commande option:selected').text())
 		</script>
 
 
-{% endblock %}
+	{% endblock %}

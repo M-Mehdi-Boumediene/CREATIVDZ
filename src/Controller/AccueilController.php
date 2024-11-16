@@ -283,7 +283,7 @@ class AccueilController extends AbstractController
             $entityManager->persist($devisSiteVitrine);
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_calcule_vitrine', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_devis', [], Response::HTTP_SEE_OTHER);
         }
      
 
