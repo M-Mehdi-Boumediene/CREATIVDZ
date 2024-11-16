@@ -12,6 +12,8 @@ use App\Repository\DevisSiteVitrineRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 
 class AccueilController extends AbstractController
 {
@@ -273,7 +275,7 @@ class AccueilController extends AbstractController
         ]);
     }
     #[Route('/devis/site-vitrine', name: 'app_calcule_vitrine', methods: ['GET', 'POST'])]
-    public function devisid(Request $request, EntityManagerInterface $entityManager): Response
+    public function devisid(Request $request, EntityManagerInterface $entityManager,MailerInterface $mailer): Response
     {
         $devisSiteVitrine = new DevisSiteVitrine();
         $form = $this->createForm(DevisSiteVitrineType::class, $devisSiteVitrine);
@@ -282,6 +284,18 @@ class AccueilController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->persist($devisSiteVitrine);
             $entityManager->flush();
+
+            $email = (new Email())
+            ->from('info@creativdz.com')
+            ->to('elm3hdi@gmail.com')
+            //->cc('cc@example.com')
+            //->bcc('bcc@example.com')
+            //->replyTo('fabien@example.com')
+            //->priority(Email::PRIORITY_HIGH)
+            ->subject('Time for Symfony Mailer!')
+            ->html('<p>See Twig integration for better HTML integration!</p>');
+
+            $mailer->send($email);
 
             return $this->redirectToRoute('app_devis', [], Response::HTTP_SEE_OTHER);
         }
