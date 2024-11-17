@@ -306,7 +306,7 @@ class AccueilController extends AbstractController
             $mail = $form->get('email')->getData();
             $tel = $form->get('tel')->getData();
 
-            $email = (new Email())
+            $email = (new TemplatedEmail())
             ->from('info@creativdz.com')
             ->to('elm3hdi@gmail.com')
             //->cc('cc@example.com')
