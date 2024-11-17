@@ -285,6 +285,8 @@ class AccueilController extends AbstractController
             $entityManager->persist($devisSiteVitrine);
             $entityManager->flush();
 
+            $template = $form->get('template')->getData();
+
             $email = (new Email())
             ->from('info@creativdz.com')
             ->to('elm3hdi@gmail.com')
@@ -292,8 +294,8 @@ class AccueilController extends AbstractController
             //->bcc('bcc@example.com')
             //->replyTo('fabien@example.com')
             ->priority(Email::PRIORITY_HIGH)
-            ->subject('Time for Symfony Mailer!')
-            ->html('<p>See Twig integration for better HTML integration!</p>');
+            ->subject('Demmande de devis')
+            ->html('<p>See Twig integration '.$template.'for better HTML integration!</p>');
 
             $mailer->send($email);
 
