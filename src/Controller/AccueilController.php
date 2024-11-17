@@ -315,30 +315,30 @@ class AccueilController extends AbstractController
             ->priority(Email::PRIORITY_HIGH)
             ->subject('Demmande de devis')
 
-            ->htmlTemplate('Emails/devis-site-vitrine.html.twig', array(
-            'template' => $template,
-            'nbpages' => $nbpages,
-            'nbslides' => $nbslides,
-            'administration' => $administration,
-            'actualite' => $actualite,
-            'responsive' => $responsive,
-            'referencement' => $referencement,
-            'redaction' => $redaction,
-            'logo' => $logo,
-            'paiement' => $paiement,
-            'emailing' => $emailing,
-            'formcomplex' => $formcomplex,
-            'catalogue' => $catalogue,
-            'multimedia' => $multimedia,
-            'reservation' => $reservation,
-            'statistiques' => $statistiques,
-            'nom' => $nom,
-            'email' => $mail,
-            'tel' => $tel,
+            ->htmlTemplate('Emails/devis-site-vitrine.html.twig')
+            ->context([
+                'template' => $template,
+                'nbpages' => $nbpages,
+                'nbslides' => $nbslides,
+                'administration' => $administration,
+                'actualite' => $actualite,
+                'responsive' => $responsive,
+                'referencement' => $referencement,
+                'redaction' => $redaction,
+                'logo' => $logo,
+                'paiement' => $paiement,
+                'emailing' => $emailing,
+                'formcomplex' => $formcomplex,
+                'catalogue' => $catalogue,
+                'multimedia' => $multimedia,
+                'reservation' => $reservation,
+                'statistiques' => $statistiques,
+                'nom' => $nom,
+                'email' => $mail,
+                'tel' => $tel,
+            ])  
 
-          
-
-    ));
+    ;
             $mailer->send($email);
 
             return $this->redirectToRoute('app_devis', [], Response::HTTP_SEE_OTHER);
