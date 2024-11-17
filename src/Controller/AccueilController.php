@@ -14,6 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 
 class AccueilController extends AbstractController
 {
@@ -286,6 +287,24 @@ class AccueilController extends AbstractController
             $entityManager->flush();
 
             $template = $form->get('template')->getData();
+            $nbpages = $form->get('nbpages')->getData();
+            $nbslides = $form->get('nbslides')->getData();
+            $administration = $form->get('administration')->getData();
+            $actualite = $form->get('actualite')->getData();
+            $responsive = $form->get('responsive')->getData();
+            $referencement = $form->get('referencement')->getData();
+            $redaction = $form->get('redaction')->getData();
+            $logo = $form->get('logo')->getData();
+            $emailing = $form->get('emailing')->getData();
+            $paiement = $form->get('paiement')->getData();
+            $formcomplex = $form->get('formcomplex')->getData();
+            $catalogue = $form->get('catalogue')->getData();
+            $multimedia = $form->get('multimedia')->getData();
+            $reservation = $form->get('reservation')->getData();
+            $statistiques = $form->get('statistiques')->getData();
+            $nom = $form->get('nom')->getData();
+            $mail = $form->get('email')->getData();
+            $tel = $form->get('tel')->getData();
 
             $email = (new Email())
             ->from('info@creativdz.com')
@@ -295,8 +314,31 @@ class AccueilController extends AbstractController
             //->replyTo('fabien@example.com')
             ->priority(Email::PRIORITY_HIGH)
             ->subject('Demmande de devis')
-            ->html('<p>See Twig integration '.$template.'for better HTML integration!</p>');
 
+            ->htmlTemplate('emails/devis-site-vitrine.html.twig', array('facture' => $facture,
+            'template' => $template,
+            'nbpages' => $nbpages,
+            'nbslides' => $nbslides,
+            'administration' => $administration,
+            'actualite' => $actualite,
+            'responsive' => $responsive,
+            'referencement' => $referencement,
+            'redaction' => $redaction,
+            'logo' => $logo,
+            'paiement' => $paiement,
+            'emailing' => $emailing,
+            'formcomplex' => $formcomplex,
+            'catalogue' => $catalogue,
+            'multimedia' => $multimedia,
+            'reservation' => $reservation,
+            'statistiques' => $statistiques,
+            'nom' => $nom,
+            'email' => $mail,
+            'tel' => $tel,
+
+          
+
+    ));
             $mailer->send($email);
 
             return $this->redirectToRoute('app_devis', [], Response::HTTP_SEE_OTHER);
