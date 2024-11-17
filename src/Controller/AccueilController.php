@@ -334,7 +334,7 @@ class AccueilController extends AbstractController
                 'reservation' => $reservation,
                 'statistiques' => $statistiques,
                 'nom' => $nom,
-                'email' => $mail,
+                'adressemail' => $mail,
                 'tel' => $tel,
             ])  
 
