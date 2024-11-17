@@ -315,7 +315,7 @@ class AccueilController extends AbstractController
             ->priority(Email::PRIORITY_HIGH)
             ->subject('Demmande de devis')
 
-            ->htmlTemplate('emails/devis-site-vitrine.html.twig', array(
+            ->htmlTemplate('Emails/devis-site-vitrine.html.twig', array(
             'template' => $template,
             'nbpages' => $nbpages,
             'nbslides' => $nbslides,
