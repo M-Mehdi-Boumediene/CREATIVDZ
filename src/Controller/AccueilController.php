@@ -312,7 +312,7 @@ class AccueilController extends AbstractController
             $email = (new TemplatedEmail())
             
             ->from('info@creativdz.com')
-            ->to($recipients)
+            ->to("$recipients")
             //->cc('cc@example.com')
             //->bcc('bcc@example.com')
             //->replyTo('fabien@example.com')
