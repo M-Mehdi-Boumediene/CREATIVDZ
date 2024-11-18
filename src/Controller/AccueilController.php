@@ -305,10 +305,14 @@ class AccueilController extends AbstractController
             $nom = $form->get('nom')->getData();
             $mail = $form->get('email')->getData();
             $tel = $form->get('tel')->getData();
-
+            $recipients = [
+                'elm3hdi4@gmail.com',
+                'elm3hdi@gmail.com'
+            ];
             $email = (new TemplatedEmail())
+            
             ->from('info@creativdz.com')
-            ->to('elm3hdi@gmail.com')
+            ->to($recipients)
             //->cc('cc@example.com')
             //->bcc('bcc@example.com')
             //->replyTo('fabien@example.com')
