@@ -314,7 +314,7 @@ class AccueilController extends AbstractController
             ->from(new Address('info@creativdz.com', 'CREATIV'))
             ->from('info@creativdz.com')
             ->to('elm3hdi@gmail.com')
-            ->addTo('elm3hdi4@gmail.com')
+            ->addTo('Hadjer.meraiki@gmail.com')
             //->cc('cc@example.com')
             //->bcc('bcc@example.com')
             //->replyTo('fabien@example.com')
