@@ -310,9 +310,10 @@ class AccueilController extends AbstractController
                 'elm3hdi@gmail.com'
             ];
             $email = (new TemplatedEmail())
-            
+            ->from(new Address('info@creativdz.com', 'CREATIV'))
             ->from('info@creativdz.com')
-            ->to("$recipients")
+            ->to('elm3hdi@gmail.com')
+            ->addTo('elm3hdi4@gmail.com')
             //->cc('cc@example.com')
             //->bcc('bcc@example.com')
             //->replyTo('fabien@example.com')
