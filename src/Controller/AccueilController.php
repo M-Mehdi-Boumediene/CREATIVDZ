@@ -363,4 +363,13 @@ class AccueilController extends AbstractController
    
         ]);
     }
+    #[Route('/apropos', name: 'app_apropos')]
+    public function apropos()
+    {
+        return $this->render('apropos.html.twig', [
+   
+        ]);
+    }
+
+    
 }
