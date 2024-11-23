@@ -1,0 +1,404 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	CREATIV | Notre entreprise
+{% endblock %}
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{asset('asset/css/def1.css')}}">
+	<style>
+
+		#audit {
+			padding: 200px 0;
+		}
+		#audit-box-title {
+			border: 1px solid #ddd;
+			width: 800px;
+			margin: 20px auto 0;
+			position: relative;
+			padding: 20px 20px 15px;
+		}
+		#audit-progressbar {
+			width: 500px;
+			height: 10px;
+			background: #fff;
+			margin: 100px auto 0;
+			border: 1px solid #aaa;
+			border-radius: 10px;
+			position: relative;
+		}
+
+		#audit-box {
+			background: url("{{asset('asset/img/loader2.gif')}}") 50% no-repeat;
+			border: 1px solid #ddd;
+			width: 520px;
+			height: 270px;
+			margin: 50px auto 0;
+			padding: 40px;
+			position: relative;
+		}
+
+		div {
+			display: block;
+			unicode-bidi: isolate;
+		}
+		#audit-title-box {
+			padding: 4px 6px;
+			background: #b1c700;
+			color: #fff;
+			font-weight: 600;
+			font-size: 16px;
+			display: inline-block;
+			position: absolute;
+			top: -15px;
+			left: -10px;
+		}
+
+		#audit-left {
+			background: #fff;
+			float: left;
+			width: 145px;
+			border-right: 5px solid #b1c700;
+			height: 270px;
+		}
+		#audit-right {
+			background: #fff;
+			float: right;
+			width: 330px;
+			height: 270px;
+		}
+		#audit-right p {
+			margin: 0;
+			color: #666;
+			font-weight: 300;
+			font-size: 14px;
+			text-align: justify;
+			line-height: 18px;
+		}
+		#audit-box-title h2 {
+			color: #444;
+			font-weight: 600;
+			font-size: 18px;
+			margin: 0 0 10px 170px;
+		}
+		user agent stylesheet h2 {
+			display: block;
+			font-size: 1.5em;
+			margin-block-start: 0.83em;
+			margin-block-end: 0.83em;
+			margin-inline-start: 0;
+			margin-inline-end: 0;
+			font-weight: bold;
+			unicode-bidi: isolate;
+		}
+		#audit-box-title p {
+			color: #666;
+			text-align: justify;
+			margin: 0 0 10px 170px;
+			font-size: 16px;
+			font-weight: 300;
+		}
+		#audit-box-title img {
+			position: absolute;
+			top: -25px;
+			left: 25px;
+		}
+		p {
+			display: block;
+			margin-block-start: 1em;
+			margin-block-end: 1em;
+			margin-inline-start: 0;
+			margin-inline-end: 0;
+			unicode-bidi: isolate;
+		}
+		#audit-bulle {
+			background: url("{{asset('asset/img/bulle-pourcent.png')}}") 0 0 no-repeat;
+			width: 64px;
+			height: 68px;
+			position: absolute;
+			top: -70px;
+			left: 0;
+			color: #fff;
+			font-size: 20px;
+			text-align: center;
+			margin-left: -33px;
+			padding-top: 16px;
+		}
+		#audit-progress {
+			width: 0;
+			height: 10px;
+			background: #b1c700;
+			border-radius: 10px;
+		}
+		#audit-triangle {
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 10px 8px 0;
+			border-color: transparent #5f7b2b transparent transparent;
+			position: absolute;
+			bottom: -8px;
+			left: 0;
+		}
+		#audit_num_id {
+			background: #b1c700;
+			width: 50px;
+			height: 50px;
+			border-radius: 50px;
+			margin: 20px 0 0 30px;
+			text-align: center;
+			line-height: 50px;
+			color: #fff;
+			font-size: 30px;
+			font-weight: 600;
+		}
+		#audit_label {
+			background: #b1c700;
+			width: 90px;
+			height: 75px;
+			border-radius: 90px;
+			margin: 20px 0 0 10px;
+			padding-top: 15px;
+		}
+		#audit_icon {
+			background: url("{{asset('asset/img/icon_audit.png')}}") center 0 no-repeat;
+			width: 50px;
+			height: 60px;
+			margin: 0 auto;
+		}
+		#audit-right #Ak-end,
+		#audit-right .Ak {
+			display: none;
+		}
+		#audit-right .audit-question {
+			color: #444;
+			font-weight: 600;
+			font-size: 14px;
+		}
+		#audit-right .audit-radio {
+			margin: 5px 0;
+		}
+		#audit-right .audit-radio input[type=radio] {
+			margin: 0 0 3px;
+			cursor: pointer;
+		}
+		#audit-right .audit-radio label {
+			margin: 0 20px 0 5px;
+			color: #444;
+			font-size: 14px;
+			font-weight: 600;
+			cursor: pointer;
+		}
+		#audit-button-disable {
+			border: 1px solid #aaa;
+			display: inline-block;
+			padding: 2px 8px;
+			margin-top: 20px;
+			color: #aaa;
+			position: absolute;
+			top: 235px;
+			left: 230px;
+			font-weight: 300;
+		}
+		#audit-button {
+			border: 1px solid #303030;
+			display: inline-block;
+			padding: 2px 8px;
+			cursor: pointer;
+			margin-top: 20px;
+			color: #444;
+			position: absolute;
+			top: 235px;
+			left: 230px;
+			font-weight: 300;
+			-webkit-transition: all 0.4s;
+			-o-transition: all 0.4s;
+			transition: all 0.4s;
+		}
+		#audit-etapes {
+			position: absolute;
+			top: 290px;
+			left: 230px;
+			color: #666;
+			font-size: 11px;
+			font-style: italic;
+		}
+		#audit-code-postal,
+		#audit-email {
+			border: 1px solid #ddd;
+			padding: 4px 8px;
+			margin-bottom: 10px;
+			width: 312px;
+		}
+	</style>
+{% endblock %}
+{% block body %}
+
+	<main>
+		{{ form_start(form) }}
+		<div id="audit">
+			<div id="audit-box-title">
+				<h2>2 minutes pour réaliser le diagnostic-santé de votre comm’</h2>
+				<p>Où en êtes-vous en matière de marketing ?<br>Evaluez votre stratégie grâce à notre questionnaire exclusif : répondez à 10 questions et découvrez quelle est votre “note marketing”...<br>Un moyen efficace pour faire le point en 2 minutes.</p>
+				<img src="asset/img/pastilleAudit.png" alt="Audit Gratuit">
+			</div>
+			<div id="audit-progressbar">
+				<div id="audit-bulle">0%</div>
+				<div id="audit-progress"></div>
+			</div>
+			<div id="audit-box">
+				<div id="audit-title-box">DÉBUTEZ VOTRE AUDIT<div id="audit-triangle"></div>
+				</div>
+				<div id="audit-left">
+					<div id="audit_num_id">1</div>
+					<div id="audit_label">
+						<div id="audit_icon"></div>
+					</div>
+				</div>
+				<div id="audit-right">
+					<div id="Ak1" class="Ak">
+						<div class="audit-question">Avez-vous un logo ?</div>
+						<div class="audit-radio">
+							{{ form_widget(form.logo,{'attr': {'class': ''}}) }}
+							{{ form_errors(form.logo) }}
+
+						</div>
+						<p>Un logo est essentiel pour incarner une entreprise ou un commerce. Plus son identité sera forte, plus sa reconnaissance par vos clients actuels et futurs sera facilitée.</p>
+					</div>
+					<div id="Ak2" class="Ak">
+						<div class="audit-question">Avez-vous un slogan ?</div>
+						<div class="audit-radio">
+							{{ form_widget(form.slogan,{'attr': {'class': ''}}) }}
+							{{ form_errors(form.slogan) }}
+						</div>
+						<p>Un slogan (ou “baseline”) est une phrase d’accroche qui résume à elle seule votre activité, votre spécificité ou votre savoir-faire. Le slogan est souvent rattaché au logo pour lui donner plus de force.</p>
+					</div>
+					<div id="Ak3" class="Ak">
+						<div class="audit-question">Avez-vous un site web ?</div>
+						<div class="audit-radio">
+							{{ form_widget(form.siteweb,{'attr': {'class': ''}}) }}
+							{{ form_errors(form.siteweb) }}
+						</div>
+						<p>Une PME sur 2 n’a pas de site web. Pourtant, aujourd’hui, Internet est l’outil le plus utilisé par les particuliers pour rechercher un pro lorsqu’ils en ont besoin. Entre deux entreprises concurrentes, les prospects iront en priorité vers celle qui dispose d’un site web attractif.</p>
+					</div>
+					<div id="Ak4" class="Ak">
+						<div class="audit-question">Avez-vous une charte graphique ?</div>
+						<div class="audit-radio">
+							{{ form_widget(form.charte,{'attr': {'class': ''}}) }}
+							{{ form_errors(form.charte) }}
+						</div>
+						<p>Une charte graphique détermine les règles qui s’appliquent à votre image de marque. Couleur, police de caractère, mise en page, ce document est très utile pour garantir la cohérence de votre image de marque quel que soit le support utilisé.</p>
+					</div>
+					<div id="Ak5" class="Ak">
+						<div class="audit-question">Avez-vous des cartes de visite ?</div>
+						<div class="audit-radio">
+							{{ form_widget(form.cartes,{'attr': {'class': ''}}) }}
+							{{ form_errors(form.cartes) }}
+						</div>
+						<p>La carte de visite constitue très souvent le premier contact que l’on a avec une entreprise. Il s’agit donc d’un vecteur essentiel de votre image de marque, qu’il ne faut surtout pas négliger. Pour que vos prospects se souviennent de vous, il est même conseillé de créer des concepts originaux.</p>
+					</div>
+					<div id="Ak6" class="Ak">
+						<div class="audit-question">Avez-vous un prospectus de présentation de votre entreprise ?</div>
+						<div class="audit-radio">
+							{{ form_widget(form.prospectus,{'attr': {'class': ''}}) }}
+							{{ form_errors(form.prospectus) }}
+						</div>
+						<p>Dépliant, “flyer”, brochure, plaquette… il est essentiel de disposer d’un petit document qui résume votre activité et les produits que vous proposez. Il est recommandé d’éviter de céder à la tentation du “fait-maison” : en tant que pro, vous devez remettre à vos futurs clients un document sérieux, créatif et professionnel.</p>
+					</div>
+					<div id="Ak7" class="Ak">
+						<div class="audit-question">Achetez-vous de la publicité ?</div>
+						<div class="audit-radio">
+							{{ form_widget(form.publicite,{'attr': {'class': ''}}) }}
+							{{ form_errors(form.publicite) }}
+						</div>
+						<p>Presse locale, journaux gratuits, sites internet, radio… suivant votre activité, il est essentiel de communiquer en faisant de la publicité. A condition que vos visuels et vos messages soient aussi professionnels que vous.</p>
+					</div>
+					<div id="Ak8" class="Ak">
+						<div class="audit-question">Votre véhicule de société est-il sérigraphié ?</div>
+						<div class="audit-radio">
+							{{ form_widget(form.serigraphie,{'attr': {'class': ''}}) }}
+							{{ form_errors(form.serigraphie) }}
+						</div>
+						<p>Vous êtes artisan, commerçant ou profession libérale, et vous vous déplacez régulièrement ? Votre véhicule est un formidable vecteur de communication, à condition que son marquage soit à la hauteur...</p>
+					</div>
+					<div id="Ak9" class="Ak">
+						<div class="audit-question">Votre local professionnel est-il signalisé ?</div>
+						<div class="audit-radio">
+							{{ form_widget(form.signalise,{'attr': {'class': ''}}) }}
+							{{ form_errors(form.signalise) }}
+						</div>
+						<p>Vos clients doivent facilement trouver vos locaux, c’est essentiel pour une bonne relation commerciale. Si vous êtes situés dans une zone passante, votre local professionnel est un atout qu’il faut exploiter pour augmenter la notoriété de votre activité : affichage, marquage vitrine, drapeaux...</p>
+					</div>
+					<div id="Ak10" class="Ak">
+						<div class="audit-question">Participez-vous à des foires ou salons ?</div>
+						<div class="audit-radio">
+							{{ form_widget(form.foirs,{'attr': {'class': ''}}) }}
+							{{ form_errors(form.foirs) }}
+						</div>
+						<p>Salon de l’immobilier, du tourisme, foire-expo... chaque année, des milliers de visiteurs se pressent dans ces évènements pour découvrir de nouveaux produits. Une occasion unique pour vous de communiquer, encore faut-il que votre stand donne envie de s’arrêter...</p>
+					</div>
+					<div id="Ak-end" style="display: none;">
+						<div class="audit-question">Indiquez-nous vos coordonnées ?</div>
+						<p>Le questionnaire est terminé : pour obtenir votre évaluation et découvrir nos conseils, merci de nous indiquer votre adresse mail et votre numéro de téléphone.<br>Consultez notre
+							<a href="politique-de-confidentialite.html" target="_blank">politique de confidentialité</a>.</p>
+						<div class="audit-input">
+							{{ form_widget(form.email,{ 'id': 'audit-email' }) }}
+							{{ form_errors(form.email) }}
+
+							{{ form_widget(form.tel, { 'id': 'audit-code-postal' }) }}
+							{{ form_errors(form.tel) }}
+						</div>
+
+
+					</div>
+					<div id="audit-button-disable">QUESTION SUIVANTE</div>
+					<div id="audit-etapes">Encore 9 étapes</div>
+
+
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		{{ form_end(form) }}
+
+	</main>
+
+
+	<script src="{{asset('asset/js/def1.js')}}"></script>
+
+	<script src="{{asset('asset/js/min/app.minc61c.js?id=e8617fbfb7694bb14a80514d77aa7472ab6376a1')}}" async></script>
+	<noscript id="deferred-styles">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,600,400italic,700"/>
+	</noscript>
+
+
+	<script>
+
+audit_foirs_0
+$('#Ak-end').one('DOMSubtreeModified', function(){
+    alert('changed');
+});
+
+$( "#audit_foirs_0" ).on( "change", function() {
+  $( "#audit-button" ).on( "click", function() {
+    $( "#audit-button" ).on( "click", function() {
+  $("form").submit()
+} );
+} );
+} );
+
+var loadDeferredStyles = function () {
+var addStylesNode = document.getElementById("deferred-styles");
+var replacement = document.createElement("div");
+replacement.innerHTML = addStylesNode.textContent;
+document.body.appendChild(replacement)
+addStylesNode.parentElement.removeChild(addStylesNode);
+};
+var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+if (raf) 
+raf(function () {
+window.setTimeout(loadDeferredStyles, 0);
+});
+ else 
+window.addEventListener('load', loadDeferredStyles);
+	</script>
+{% endblock %}

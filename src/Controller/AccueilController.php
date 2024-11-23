@@ -8,7 +8,10 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\HttpKernel\Attribute\Cache;
 use App\Entity\DevisSiteVitrine;
 use App\Form\DevisSiteVitrineType;
+use App\Entity\Audit;
+use App\Form\AuditType;
 use App\Repository\DevisSiteVitrineRepository;
+use App\Repository\AuditRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -262,11 +265,69 @@ class AccueilController extends AbstractController
         ]);
     }
 
-    #[Route('/audit', name: 'app_audit')]
-    public function audit()
+    #[Route('/audit', name: 'app_audit', methods: ['GET', 'POST'])]
+    public function audit(Request $request, EntityManagerInterface $entityManager,MailerInterface $mailer)
     {
+
+        $audit = new Audit();
+        $form = $this->createForm(AuditType::class, $audit);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->persist($audit);
+            $entityManager->flush();
+
+            $logo = $form->get('logo')->getData();
+            $slogan = $form->get('slogan')->getData();
+            $siteweb = $form->get('siteweb')->getData();
+            $charte = $form->get('charte')->getData();
+            $cartes = $form->get('cartes')->getData();
+            $prospectus = $form->get('prospectus')->getData();
+            $publicite = $form->get('publicite')->getData();
+            $serigraphie = $form->get('serigraphie')->getData();
+            $signalise = $form->get('signalise')->getData();
+            $foirs = $form->get('foirs')->getData();
+            $mail = $form->get('email')->getData();
+            $tel = $form->get('tel')->getData();
+        
+            $recipients = [
+                'elm3hdi4@gmail.com',
+                'elm3hdi@gmail.com'
+            ];
+            $email = (new TemplatedEmail())
+            ->from(new Address('info@creativdz.com', 'CREATIV'))
+            ->to('elm3hdi@gmail.com')
+            ->addTo('Hadjer.meraiki@gmail.com')
+            //->cc('cc@example.com')
+            //->bcc('bcc@example.com')
+            //->replyTo('fabien@example.com')
+            ->priority(Email::PRIORITY_HIGH)
+            ->subject('Audit en ligne')
+
+            ->htmlTemplate('Emails/audit.html.twig')
+            ->context([
+                'logo' => $logo,
+                'slogan' => $slogan,
+                'siteweb' => $siteweb,
+                'charte' => $charte,
+                'cartes' => $cartes,
+                'prospectus' => $prospectus,
+                'publicite' => $publicite,
+                'serigraphie' => $serigraphie,
+                'signalise' => $signalise,
+                'foirs' => $foirs,
+                'mail' => $mail,
+                'tel' => $tel,
+            ])  
+
+    ;
+            $mailer->send($email);
+
+            return $this->redirectToRoute('app_audit', [], Response::HTTP_SEE_OTHER);
+        }
         return $this->render('audit.html.twig', [
-   
+        
+            'form' => $form,
         ]);
     }
     #[Route('/devis', name: 'app_devis')]
@@ -370,6 +431,8 @@ class AccueilController extends AbstractController
    
         ]);
     }
+
+
 
     
 }
