@@ -1,0 +1,255 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	CREATIV | Notre entreprise
+{% endblock %}
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{asset('asset/css/def1.css')}}">
+	<style>
+h1.actualites-h1, h1.catalogue-imprimerie-h1, h1.deroulement-commande-h1, h1.faq-h1, h1.nos-promo-h1, h1.paiement-h1, h1.partenaires-h1, h1.plan-acces-h1, h1.plan-du-site-h1, h1.site-pack-h1 {
+    font-family: Open Sans, arial, helvetica, sans-serif;
+    color: #000;
+    font-size: 46px;
+    font-weight: 600;
+    text-align: center;
+    margin: 100px 0;
+    margin-top: 250px;
+}
+.reference {
+    padding: 0 16px 100px;
+}
+.reference-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.reference-item {
+    width: 124px;
+    height: 124px;
+    margin: 10px;
+    border: 1px solid #fff;
+}
+.reference-item img {
+    width: 124px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+h2.references-h2 {
+    color: #444;
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+    margin: 50px 0 100px;
+}
+.references-mairies {
+    margin-bottom: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.references-mairies .references-mairies-col {
+    width: 240px;
+    margin-bottom: 40px;
+}
+.references-mairies .references-mairies-col ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.references-mairies .references-mairies-col ul li {
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
+	</style>
+{% endblock %}
+{% block body %}
+	<main>
+		<div class="content">
+			<h1 class="actualites-h1">Ils nous font confiance</h1>
+			<div class="reference">
+
+				<div class="reference-items">
+					<div class="reference-item"><img src="asset/tmp/reference/TSA.jpg" alt="logo tsa algerie "></div>
+					<div class="reference-item"><img src="asset/tmp/reference/enn-logo.webp" alt="logo ennahar"></div>
+					<div class="reference-item"><img src="asset/tmp/reference/jindependant.png" alt="LOGO le jeune independant.png"></div>
+					<div class="reference-item"><img src="asset/tmp/reference/sawtalahrar.png" alt="logo sawt alahrar"></div>
+					<div class="reference-item"><img src="asset/tmp/reference/napec.png" alt="logo napec"></div>
+                  	<div class="reference-item"><img src="asset/tmp/reference/echorouk.png" alt="logo echorouk.png"></div>
+					<div class="reference-item"><img src="asset/tmp/reference/iris.jpg" alt="logo iris"></div>
+
+                    <div class="reference-item"><img src="asset/tmp/reference/radio.png" alt="LOGO radio"></div>
+					<div class="reference-item"><img src="asset/tmp/reference/fln.png" alt="logo fln"></div>
+					<div class="reference-item"><img src="asset/tmp/reference/crbt.jpg" alt="logo crbt "></div>
+					<div class="reference-item"><img src="asset/tmp/reference/atrbsa.jpg" alt="atrbsa"></div>
+					<div class="reference-item"><img src="asset/tmp/reference/onat.png" alt="logo onat"></div>
+					<div class="reference-item"><img src="asset/tmp/reference/totalenergies.png" alt="logo total energies"></div>
+					<div class="reference-item"><img src="asset/tmp/reference/ministry.jpg" alt="logo ministaire algérie "></div>
+					<div class="reference-item"><img src="asset/tmp/reference/magimix.png" alt="logo magimix algérie "></div>
+					<div class="reference-item"><img src="asset/tmp/reference/az.jpg" alt="logo azhotels.png"></div>
+					<div class="reference-item"><img src="asset/tmp/reference/essenia.jpg" alt="LOGO Es senia"></div>
+					<div class="reference-item"><img src="asset/tmp/reference/ndwi.png" alt="logo ndwi"></div>
+					<div class="reference-item"><img src="asset/tmp/reference/ifde.jpg" alt="LOGO ifde"></div>
+				
+				</div>
+
+			</div>
+	<h2 class="references-h2">Ces Wilayas d'algérie nous ont fait confiance</h2>
+			<div class="references-mairies">
+				<div class="references-mairies-col">
+					<ul>
+						<li>Oran</li>
+						<li>Alger</li>
+						<li>BelSidi-Bel-Abbès</li>
+						<li>Annaba</li>
+						<li>Tlemcen</li>
+						<li>Timimoun</li>
+						<li>Mostaganem</li>
+					</ul>
+				</div>
+				<div class="references-mairies-col">
+					<ul>
+						<li>Sétif</li>
+						<li>Blida</li>
+						<li>Béjaïa</li>
+						<li>Boumerdès</li>
+						<li>Tipaza</li>
+						<li>Constantine</li>
+						<li>M'Sila</li>
+					</ul>
+				</div>
+				<div class="references-mairies-col">
+					<ul>
+						<li>Mascara</li>
+						<li>El-Bayadh</li>
+						<li>Khenchela</li>
+						<li>Aïn-Témouchent</li>
+						<li>Relizane</li>
+						<li>Naâma</li>
+						<li>Tindouf</li>
+					</ul>
+				</div>
+				<div class="references-mairies-col">
+					<ul>
+						<li>Jijel</li>
+						<li>Saida</li>
+						<li>Guelma</li>
+						<li>Ouargla</li>
+						<li>Illizi</li>
+						<li>Ghardaia</li>
+						<li>Tizi-Ouzou</li>
+					</ul>
+				</div>
+				<div class="references-mairies-col">
+					<ul>
+						<li>Béchar</li>
+						<li>Blida</li>
+						<li>Bouira</li>
+						<li>Tamanrasset</li>
+						<li>Tébessa</li>
+						<li>Tiaret</li>
+						<li>Biskra</li>
+					</ul>
+				</div>
+			</div>
+			<h2 class="references-h2">Ces Communes de paris nous ont fait confiance</h2>
+			<div class="references-mairies">
+				<div class="references-mairies-col">
+					<ul>
+						<li>Ivry-sur-Seine</li>
+						<li>La Garenne-Colombes</li>
+						<li>Le Kremlin-Bicêtre</li>
+						<li>Le Pré-Saint</li>
+						<li>Les Lilas</li>
+						<li>Levallois-Perret</li>
+						<li>L’Haÿ-les-Roses</li>
+					</ul>
+				</div>
+				<div class="references-mairies-col">
+					<ul>
+						<li>Malakoff</li>
+						<li>Meudon</li>
+						<li>Montrouge</li>
+						<li>Neuilly-sur-Seine</li>
+						<li>Pantin</li>
+						<li>Paris</li>
+						<li>Puteaux</li>
+					</ul>
+				</div>
+				<div class="references-mairies-col">
+					<ul>
+						<li>Barlin</li>
+						<li>Calonne Ricouart</li>
+						<li>Grigny</li>
+						<li>Lapugnoy</li>
+						<li>Méricourt</li>
+						<li>Sains-en-Gohelle</li>
+						<li>Vaudricourt</li>
+					</ul>
+				</div>
+				<div class="references-mairies-col">
+					<ul>
+						<li>Romainville</li>
+						<li>Saint-Cloud</li>
+						<li>Saint-Mandé</li>
+						<li>Saint-Ouen</li>
+						<li>Sceaux</li>
+						<li>Sèvres</li>
+						<li>Suresnes</li>
+					</ul>
+				</div>
+				<div class="references-mairies-col">
+					<ul>
+						<li>Vanves</li>
+						<li>Vincennes</li>
+						<li>Alfortville</li>
+						<li>Arcueil</li>
+						<li>Asnières</li>
+						<li>Asnières-sur-Seine</li>
+						<li>Bagneux</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+
+	<script src="{{asset('asset/js/def1.js')}}"></script>
+
+	<script src="{{asset('asset/js/min/app.minc61c.js?id=e8617fbfb7694bb14a80514d77aa7472ab6376a1')}}" async></script>
+	<noscript id="deferred-styles">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,600,400italic,700"/>
+	</noscript>
+
+
+	<script>
+
+		var loadDeferredStyles = function () {
+var addStylesNode = document.getElementById("deferred-styles");
+var replacement = document.createElement("div");
+replacement.innerHTML = addStylesNode.textContent;
+document.body.appendChild(replacement)
+addStylesNode.parentElement.removeChild(addStylesNode);
+};
+var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+if (raf) 
+raf(function () {
+window.setTimeout(loadDeferredStyles, 0);
+});
+ else 
+window.addEventListener('load', loadDeferredStyles);
+	</script>
+{% endblock %}
