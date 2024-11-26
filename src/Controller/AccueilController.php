@@ -250,6 +250,8 @@ class AccueilController extends AbstractController
    
         ]);
     }
+
+
     #[Route('/galerie/imprimerie', name: 'app_galerieimprimerie')]
     public function galerieimprimerie()
     {
