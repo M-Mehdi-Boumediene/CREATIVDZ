@@ -1,142 +1,170 @@
 {% extends 'base.html.twig' %}
 {% block title %}
-	CREATIV | Notre entreprise
+	CREATIV|Création de site web FAQ
 {% endblock %}
 {% block stylesheets %}
 	<link rel="stylesheet" href="{{asset('asset/css/def1.css')}}">
 	<style>
-    .faq {
-    margin-bottom: 150px;
-    margin-top: 250px;
-}
-h1.actualites-h1, h1.catalogue-imprimerie-h1, h1.deroulement-commande-h1, h1.faq-h1, h1.nos-promo-h1, h1.paiement-h1, h1.partenaires-h1, h1.plan-acces-h1, h1.plan-du-site-h1, h1.site-pack-h1 {
-    font-family: Open Sans, arial, helvetica, sans-serif;
-    color: #000;
-    font-size: 46px;
-    font-weight: 600;
-    text-align: center;
-    margin: 100px 0;
-}
- .faq h2 {
-    font-size: 22px;
-    color: #444;
-    font-weight: 300;
-    cursor: pointer;
-    width: 1186px;
-    margin: 10px auto;
-    border: 1px solid #ddd;
-    border-left-width: 3px;
-    padding: 2px 0 2px 10px;
-    background: #eee;
-}
-user agent stylesheet
-h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-}
-::selection {
-    color: #fff;
-    background: #b1c700;
-}   
-.faq .faq-reveal {
-    width: 1200px;
-    margin: 0 auto;
-    color: #666;
-    display: none;
-    border-bottom: 1px solid #d7d7d7;
-}
-.faq .faq-reveal h3 {
-    font-weight: 300;
-    color: #444;
-    font-size: 22px;
-}
-.faq .faq-reveal p {
-    margin: 0 0 25px;
-    text-align: justify;
-    color: #666;
-    font-weight: 300;
-}
-    </style>
+		.faq {
+			margin-bottom: 150px;
+			margin-top: 250px;
+		}
+		h1.actualites-h1,
+		h1.catalogue-imprimerie-h1,
+		h1.deroulement-commande-h1,
+		h1.faq-h1,
+		h1.nos-promo-h1,
+		h1.paiement-h1,
+		h1.partenaires-h1,
+		h1.plan-acces-h1,
+		h1.plan-du-site-h1,
+		h1.site-pack-h1 {
+			font-family: Open Sans, arial, helvetica, sans-serif;
+			color: #000;
+			font-size: 46px;
+			font-weight: 600;
+			text-align: center;
+			margin: 100px 0;
+		}
+		.faq h2 {
+			font-size: 22px;
+			color: #444;
+			font-weight: 300;
+			cursor: pointer;
+			width: 1186px;
+			margin: 10px auto;
+			border: 1px solid #ddd;
+			border-left-width: 3px;
+			padding: 2px 0 2px 10px;
+			background: #eee;
+		}
+		user agent stylesheet h2 {
+			display: block;
+			font-size: 1.5em;
+			margin-block-start: 0.83em;
+			margin-block-end: 0.83em;
+			margin-inline-start: 0;
+			margin-inline-end: 0;
+			font-weight: bold;
+			unicode-bidi: isolate;
+		}
+		::selection {
+			color: #fff;
+			background: #b1c700;
+		}
+		.faq .faq-reveal {
+			width: 1200px;
+			margin: 0 auto;
+			color: #666;
+			display: none;
+			border-bottom: 1px solid #d7d7d7;
+		}
+		.faq .faq-reveal h3 {
+			font-weight: 300;
+			color: #444;
+			font-size: 22px;
+		}
+		.faq .faq-reveal p {
+			margin: 0 0 25px;
+			text-align: justify;
+			color: #666;
+			font-weight: 300;
+		}
+	</style>
 {% endblock %}
 {% block body %}
 
 	<main>
-<div class="faq">
+		<div class="faq">
 
-    <h1 class="faq-h1">FAQ - Foire Aux Questions</h1>
+			<h1 class="faq-h1">FAQ - Foire Aux Questions</h1>
 
-    <h2><i class="fas fa-question-circle" aria-hidden></i>Comment se déroule une commande chez CREATIV ?</h2>
-    <div class="faq-reveal">
-        <h3>Étape 1 // le briefing</h3>
-        <p>Après discussion, nous établissons un briefing sur l’ensemble de vos besoins. Nous vous communiquons un prix approximatif et le temps éstimé avec nos suggestions et recommandations pour répondre à votre demande. Ensuite, nous passons à l’étape 2 (qui consiste à nous tester) ou directement à l’étape 3 pour passer commande.</p>
-        <p><strong>À savoir</strong> : il vous faudra peut-être prévoir un délai supplémentaire si vous passez par l'étape 2.</p>
-        <h3>Étape 2 // une pré-maquette gratuite et sans engagement*</h3>
-        <p>Vous avez besoin d’être rassuré sur notre expertise avant de passer commande ? Ce n’est pas un problème. Nous planifions une pré-maquette gratuite et sans engagement !* dès la réception de vos informations (textes sur votre activité, photos, des éléments graphiques en votre possession). Nous vous présentons notre proposition de maquette. Notre projet vous séduit ? Le devis validé, nous passons alors à l’étape 3.</p>
-        <p><strong>À savoir</strong> : comptez un délai de 2 à 5 jours maximum pour un aperçu de la pré-maquette.</p>
-        <h3>Étape 3 // la commande de la maquette</h3>
-        <p>Le devis est accepté et vous souhaitez avancer rapidement sur votre projet ? Pour valider votre commande, vous devez verser un acompte de 50% du montant total. Après réception de vos informations (textes précis sur votre activité, photos ou autres éléments graphiques en votre possession), nous échangeons sur le projet et planifions ensemble les étapes de réalisations : l’élaboration des maquettes. Nous pouvons ensuite débuter l’étape de conception.</p>
-        <h3>Étape 4 // les corrections de la maquette</h3>
-        <p>Vous constatez qu’il est nécessaire de faire quelques corrections. Nous pouvons, si vous le souhaitez, organiser un rendez-vous, pour revoir ensemble le projet avec l’un de nos graphistes et développeurs ou un chef de projets. Nous prendrons en compte l’ensemble de vos corrections* jusqu’à la validation définitive de la maquette.</p>
-        <p>* Les modifications/corrections successives peuvent être facturées. Pour un tarif en maquette « Éco », il est prévu 1 aller/retour pour les corrections, 2 allers/retours pour le tarif « Standard » et pour le tarif « Prestige », le nombre de corrections est illimité.</p>
-        <h3>Étape 5 // la livraison</h3>
-        <p>Votre commande prête, vous vous prévenons par SMS ou par un appel téléphonique. Le solde devra être versé à la livraison.</p>
-    </div>
+			<h2>
+				<i class="fas fa-question-circle" aria-hidden></i>Comment se déroule une commande chez CREATIV ?</h2>
+			<div class="faq-reveal">
+				<h3>Étape 1 // le briefing</h3>
+				<p>Après discussion, nous établissons un briefing sur l’ensemble de vos besoins. Nous vous communiquons un prix approximatif et le temps éstimé avec nos suggestions et recommandations pour répondre à votre demande. Ensuite, nous passons à l’étape 2 (qui consiste à nous tester) ou directement à l’étape 3 pour passer commande.</p>
+				<p>
+					<strong>À savoir</strong>
+					: il vous faudra peut-être prévoir un délai supplémentaire si vous passez par l'étape 2.</p>
+				<h3>Étape 2 // une pré-maquette gratuite et sans engagement*</h3>
+				<p>Vous avez besoin d’être rassuré sur notre expertise avant de passer commande ? Ce n’est pas un problème. Nous planifions une pré-maquette gratuite et sans engagement !* dès la réception de vos informations (textes sur votre activité, photos, des éléments graphiques en votre possession). Nous vous présentons notre proposition de maquette. Notre projet vous séduit ? Le devis validé, nous passons alors à l’étape 3.</p>
+				<p>
+					<strong>À savoir</strong>
+					: comptez un délai de 2 à 5 jours maximum pour un aperçu de la pré-maquette.</p>
+				<h3>Étape 3 // la commande de la maquette</h3>
+				<p>Le devis est accepté et vous souhaitez avancer rapidement sur votre projet ? Pour valider votre commande, vous devez verser un acompte de 50% du montant total. Après réception de vos informations (textes précis sur votre activité, photos ou autres éléments graphiques en votre possession), nous échangeons sur le projet et planifions ensemble les étapes de réalisations : l’élaboration des maquettes. Nous pouvons ensuite débuter l’étape de conception.</p>
+				<h3>Étape 4 // les corrections de la maquette</h3>
+				<p>Vous constatez qu’il est nécessaire de faire quelques corrections. Nous pouvons, si vous le souhaitez, organiser un rendez-vous, pour revoir ensemble le projet avec l’un de nos graphistes et développeurs ou un chef de projets. Nous prendrons en compte l’ensemble de vos corrections* jusqu’à la validation définitive de la maquette.</p>
+				<p>* Les modifications/corrections successives peuvent être facturées. Pour un tarif en maquette « Éco », il est prévu 1 aller/retour pour les corrections, 2 allers/retours pour le tarif « Standard » et pour le tarif « Prestige », le nombre de corrections est illimité.</p>
+				<h3>Étape 5 // la livraison</h3>
+				<p>Votre commande prête, vous vous prévenons par SMS ou par un appel téléphonique. Le solde devra être versé à la livraison.</p>
+			</div>
 
-    <h2><i class="fas fa-question-circle" aria-hidden></i>Quel est le délai de réception d'un devis ?</h2>
-    <div class="faq-reveal">
-        <p>nous nous engageons à vous répondre sous 24 heures maximum. Toutefois, si votre demande est urgente, stipulez-le nous. Nous vous répondrons dans la journée. Une estimation tarifaire vous sera faite entre 48 à 72 heures selon la complexité du projet, des éléments et détails reçus.</p>
-        <p><strong>À savoir</strong> : plus votre descriptif sera complet et précis (Références, photos, couleurs, formes, styles, textes...), mieux nous pourrons répondre à votre demande et établir un devis au juste prix. Cette étape essentielle permet ainsi d’éviter de nombreux échanges.</p>
-    </div>
+			<h2>
+				<i class="fas fa-question-circle" aria-hidden></i>Quel est le délai de réception d'un devis ?</h2>
+			<div class="faq-reveal">
+				<p>nous nous engageons à vous répondre sous 24 heures maximum. Toutefois, si votre demande est urgente, stipulez-le nous. Nous vous répondrons dans la journée. Une estimation tarifaire vous sera faite entre 48 à 72 heures selon la complexité du projet, des éléments et détails reçus.</p>
+				<p>
+					<strong>À savoir</strong>
+					: plus votre descriptif sera complet et précis (Références, photos, couleurs, formes, styles, textes...), mieux nous pourrons répondre à votre demande et établir un devis au juste prix. Cette étape essentielle permet ainsi d’éviter de nombreux échanges.</p>
+			</div>
 
-    <h2><i class="fas fa-question-circle" aria-hidden></i>Quel est le délai de réception d'une commande ?</h2>
-    <div class="faq-reveal">
-        <p>Nous avons réalisé l’audit de vos besoins et vous souhaitez passer commande ? Il vous faudra prévoir 2 à 5 jours pour recevoir votre pré-maquette. Pour les sites internet comptez un délai de 1 à 5 semaines (selon la complexité du projet). Pour rappel, la pré-maquette chez CREATIV est sans engagement. Nous vous la présentons mais elle reste notre propriété jusqu’au versement de votre acompte sur la commande.</p>
-    </div>
+			<h2>
+				<i class="fas fa-question-circle" aria-hidden></i>Quel est le délai de réception d'une commande ?</h2>
+			<div class="faq-reveal">
+				<p>Nous avons réalisé l’audit de vos besoins et vous souhaitez passer commande ? Il vous faudra prévoir 2 à 5 jours pour recevoir votre pré-maquette. Pour les sites internet comptez un délai de 1 à 5 semaines (selon la complexité du projet). Pour rappel, la pré-maquette chez CREATIV est sans engagement. Nous vous la présentons mais elle reste notre propriété jusqu’au versement de votre acompte sur la commande.</p>
+			</div>
 
-    <h2><i class="fas fa-question-circle" aria-hidden></i>Comment puis-je obtenir une pré-maquette gratuite et sans engagement ?</h2>
-    <div class="faq-reveal">
-        <p>Vous pouvez obtenir une première esquisse de votre projet car la pré-maquette chez nous est sans engagement. Pourquoi procédons-nous de telle sorte ? Nous vous permettons ainsi d’avoir un aperçu de votre projet et de notre savoir-faire créatif et publicitaire. Toutefois, cette pré-maquette reste notre entière propriété même si vous ne souhaitez donner suite au projet.</p>
-    </div>
+			<h2>
+				<i class="fas fa-question-circle" aria-hidden></i>Comment puis-je obtenir une pré-maquette gratuite et sans engagement ?</h2>
+			<div class="faq-reveal">
+				<p>Vous pouvez obtenir une première esquisse de votre projet car la pré-maquette chez nous est sans engagement. Pourquoi procédons-nous de telle sorte ? Nous vous permettons ainsi d’avoir un aperçu de votre projet et de notre savoir-faire créatif et publicitaire. Toutefois, cette pré-maquette reste notre entière propriété même si vous ne souhaitez donner suite au projet.</p>
+			</div>
 
-    <h2><i class="fas fa-question-circle" aria-hidden></i>Comment faire si la première maquette que j'ai reçue ne me convient pas ?</h2>
-    <div class="faq-reveal">
-        <p>Lors de la présentation de votre premier projet, il se pourrait que des détails vous chagrinent, que le style ou l'esprit ne vous conviennent pas. Ce n'est pas problématique. Nous refaisons ensemble le point sur votre projet afin de mieux comprendre vos souhaits. Nous pouvons alors réaliser soit en direct les corrections si elles sont peu nombreuses ni trop longues à exécuter, soit les replanifier si elles demandent plus de temps*. L’idée étant bien sûr de peaufiner chaque détail jusqu'à ce que le projet vous satisfasse pleinement.</p>
-        <p><strong>À noter</strong> : il est possible de prévoir à ce stade de pré-maquette, un, voire deux allers-retours de modifications.</p>
-    </div>
+			<h2>
+				<i class="fas fa-question-circle" aria-hidden></i>Comment faire si la première maquette que j'ai reçue ne me convient pas ?</h2>
+			<div class="faq-reveal">
+				<p>Lors de la présentation de votre premier projet, il se pourrait que des détails vous chagrinent, que le style ou l'esprit ne vous conviennent pas. Ce n'est pas problématique. Nous refaisons ensemble le point sur votre projet afin de mieux comprendre vos souhaits. Nous pouvons alors réaliser soit en direct les corrections si elles sont peu nombreuses ni trop longues à exécuter, soit les replanifier si elles demandent plus de temps*. L’idée étant bien sûr de peaufiner chaque détail jusqu'à ce que le projet vous satisfasse pleinement.</p>
+				<p>
+					<strong>À noter</strong>
+					: il est possible de prévoir à ce stade de pré-maquette, un, voire deux allers-retours de modifications.</p>
+			</div>
 
-    <h2><i class="fas fa-question-circle" aria-hidden></i>Le devis ne correspond pas à votre budget ?</h2>
-    <div class="faq-reveal">
-        <p>Par défaut, nous optons généralement pour des produits dit « Standards » sur nos devis. Mais si vous souhaitez réduire votre budget, nous pouvons vous proposer des formules plus économiques. N'hésitez pas à nous en faire part, nous trouverons sûrement une solution en calculant au plus juste soit les quantités de pages, soit les supports ou fonctionnalités... Chacun de nos clients chez CREATIV est unique, et chaque projet mérite toute notre attention, quel que soit votre budget.</p>
-    </div>
+			<h2>
+				<i class="fas fa-question-circle" aria-hidden></i>Le devis ne correspond pas à votre budget ?</h2>
+			<div class="faq-reveal">
+				<p>Par défaut, nous optons généralement pour des produits dit « Standards » sur nos devis. Mais si vous souhaitez réduire votre budget, nous pouvons vous proposer des formules plus économiques. N'hésitez pas à nous en faire part, nous trouverons sûrement une solution en calculant au plus juste soit les quantités de pages, soit les supports ou fonctionnalités... Chacun de nos clients chez CREATIV est unique, et chaque projet mérite toute notre attention, quel que soit votre budget.</p>
+			</div>
 
-    <h2><i class="fas fa-question-circle" aria-hidden></i>La maquette m'appartient-elle ensuite ?</h2>
-    <div class="faq-reveal">
-        <p>Il existe plusieurs cas de figures. Pour la création d’un logo par exemple, le fichier devient votre propriété. Nous vous cèderons les droits à l’issue du règlement intégral de votre facture. Vous pourrez l’exploiter sur vos documents internes ou tous autres supports. Pour les conceptions graphiques de type flyers, cartes de visites, dépliants… les maquettes restent notre propriété. Mais nous pouvons vous fournir leurs versions PDF pour vos besoins en ligne notamment pour Facebook, twitter...</p>
-    </div>
+			<h2>
+				<i class="fas fa-question-circle" aria-hidden></i>La maquette m'appartient-elle ensuite ?</h2>
+			<div class="faq-reveal">
+				<p>Il existe plusieurs cas de figures. Pour la création d’un logo par exemple, le fichier devient votre propriété. Nous vous cèderons les droits à l’issue du règlement intégral de votre facture. Vous pourrez l’exploiter sur vos documents internes ou tous autres supports. Pour les conceptions graphiques de type flyers, cartes de visites, dépliants… les maquettes restent notre propriété. Mais nous pouvons vous fournir leurs versions PDF pour vos besoins en ligne notamment pour Facebook, twitter...</p>
+			</div>
 
-    <h2><i class="fas fa-question-circle" aria-hidden></i>Le délai ne vous convient pas ? Votre demande est très urgente ?</h2>
-    <div class="faq-reveal">
-        <p>Vous êtes pressé et vous n’avez pas anticipé vos besoins ? Vous devez lancer votre votre projet plus tôt que prévu ? Pas de panique ! Nous avons des solutions. Nous pouvons vous proposer notre service « Express » et réduire les délais de production de 7 à 2 jours, parfois même en J+1 (selon les demandes). Renseignez-vous à l'agence.</p>
-    </div>
+			<h2>
+				<i class="fas fa-question-circle" aria-hidden></i>Le délai ne vous convient pas ? Votre demande est très urgente ?</h2>
+			<div class="faq-reveal">
+				<p>Vous êtes pressé et vous n’avez pas anticipé vos besoins ? Vous devez lancer votre votre projet plus tôt que prévu ? Pas de panique ! Nous avons des solutions. Nous pouvons vous proposer notre service « Express » et réduire les délais de production de 7 à 2 jours, parfois même en J+1 (selon les demandes). Renseignez-vous à l'agence.</p>
+			</div>
 
-    <h2><i class="fas fa-question-circle" aria-hidden></i>Vous aimeriez travailler votre projet en direct avec un de nos graphistes, développeurs, chefs de projets ?</h2>
-    <div class="faq-reveal">
-        <p>Votre maquette est proche de ce que vous désiriez. Toutefois quelques points de détails demandent à être peaufinés. Qu’à cela ne tienne, nous planifions ensemble un nouveau rendez-vous si les corrections sont nombreuses. Si elles sont mineures et rapides à intégrer, l’un de nos développeurs se rendra disponible. Vous pourrez alors observer l'avancement de votre projet selon vos directives.</p>
-        <p><strong>À noter</strong> : les corrections, les modifications et le temps passé doivent être compris dans le forfait.</p>
-    </div>
+			<h2>
+				<i class="fas fa-question-circle" aria-hidden></i>Vous aimeriez travailler votre projet en direct avec un de nos graphistes, développeurs, chefs de projets ?</h2>
+			<div class="faq-reveal">
+				<p>Votre maquette est proche de ce que vous désiriez. Toutefois quelques points de détails demandent à être peaufinés. Qu’à cela ne tienne, nous planifions ensemble un nouveau rendez-vous si les corrections sont nombreuses. Si elles sont mineures et rapides à intégrer, l’un de nos développeurs se rendra disponible. Vous pourrez alors observer l'avancement de votre projet selon vos directives.</p>
+				<p>
+					<strong>À noter</strong>
+					: les corrections, les modifications et le temps passé doivent être compris dans le forfait.</p>
+			</div>
 
-    <h2><i class="fas fa-question-circle" aria-hidden></i>La maquette proposée ne vous convient pas ?</h2>
-    <div class="faq-reveal">
-        <p>Il est certainement nécessaire de refaire un point précis sur votre demande. Des informations essentielles ont pu nous échapper. Vous avez peut-être omis de nous faire part de données essentielles (couleurs à bannir, typo obligatoire…). Après un nouveau brief précis, nous nous remettrons au travail et nous vous proposerons une nouvelle maquette dans les meilleurs délais.</p>
-    </div>
+			<h2>
+				<i class="fas fa-question-circle" aria-hidden></i>La maquette proposée ne vous convient pas ?</h2>
+			<div class="faq-reveal">
+				<p>Il est certainement nécessaire de refaire un point précis sur votre demande. Des informations essentielles ont pu nous échapper. Vous avez peut-être omis de nous faire part de données essentielles (couleurs à bannir, typo obligatoire…). Après un nouveau brief précis, nous nous remettrons au travail et nous vous proposerons une nouvelle maquette dans les meilleurs délais.</p>
+			</div>
 
-</div>
+		</div>
 	</main>
 
 
@@ -150,7 +178,7 @@ h2 {
 
 	<script>
 
-var loadDeferredStyles = function () {
+		var loadDeferredStyles = function () {
 var addStylesNode = document.getElementById("deferred-styles");
 var replacement = document.createElement("div");
 replacement.innerHTML = addStylesNode.textContent;
